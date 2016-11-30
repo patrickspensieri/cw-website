@@ -1,0 +1,27 @@
+<!--Landing page with exploratory map-->
+<mvc:View
+	controllerName="ui.view.Welcome"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:gmaps="openui5.googlemaps">
+	<Page
+		title="{i18n>WELCOME_TITLE}"
+		enableScrolling="false">
+		<footer>
+			<Toolbar>
+			</Toolbar>
+		</footer>
+		<content>
+			<Text
+				text="{i18n>WELCOME_TEXT}"
+				class="welcomeText" >
+			</Text>
+            <gmaps:Map height="250px" zoom="12" lat="-33.895" lng="151.275">
+                <gmaps:markers>
+                    <gmaps:Marker lat="-33.895" lng="151.275" info="Bondi Beach" />
+                </gmaps:markers>
+            </gmaps:Map>
+		</content>
+	</Page>
+</mvc:View>

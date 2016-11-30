@@ -1,0 +1,15 @@
+[
+	{
+	"CategoryName" : "Office",
+		"Category" : "_office",
+		"NumberOfProducts" : 2
+	}, {
+		"CategoryName" : "Commercial",
+		"Category" : "_commercial",
+		"NumberOfProducts" : 2
+	}, {
+		"CategoryName" : "Residential",
+		"Category" : "_residential",
+		"NumberOfProducts" : 2
+	}
+]

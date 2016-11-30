@@ -1,0 +1,63 @@
+[
+	{
+		"ProductId" : "id_1",
+		"Name" : "234 rue du Fouillard",
+		"Category" : "_office",
+		"SupplierName" : "DeveloperName",
+		"ShortDescription" : "A quaint office with a great view.",
+		"Weight" : "321",
+		"status" : "A",
+		"Price" : 81.70,
+		"PictureUrl" : "img/product/HT-1071.jpg"
+	}, {
+		"ProductId" : "id_2",
+		"Name" : "456 de Grenouille",
+		"Category" : "_office",
+		"SupplierName" : "DeveloperName",
+		"ShortDescription" : "In the heart of the city, with a traditional feel.",
+		"Weight" : "301",
+		"status" : "A",
+		"Price" : 399.99,
+		"PictureUrl" :"img/product/HT-1073.jpg"
+	}, {
+		"ProductId" : "id_3",
+		"Name" : "239 Descartes",
+		"Category" : "_commercial",
+		"SupplierName" : "DeveloperName",
+		"ShortDescription" : "A house of cards.",
+		"Weight" : "276",
+		"status" : "O",
+		"Price" : 219,
+		"PictureUrl" :"img/product/HT-1072.jpg"
+	}, {
+		"ProductId" : "id_4",
+		"Name" : "3924 de Papillon",
+		"Category" : "_commercial",
+		"SupplierName" : "DeveloperName",
+		"ShortDescription" : "Lofty and spacious property.",
+		"Weight" : "700",
+		"status" : "A",
+		"Price" : 59,
+		"PictureUrl" :"img/product/HT-1112.jpg"
+	}, {
+		"ProductId" : "id_5",
+		"Name" : "127 Knuckle Avenue",
+		"Category" : "_residential",
+		"SupplierName" : "DeveloperName",
+		"ShortDescription" : "A small wooden home.",
+		"Weight" : "40",
+		"status" : "D",
+		"Price" : 13.49,
+		"PictureUrl" :"img/product/HT-1111.jpg"
+	}, {
+		"ProductId" : "id_6",
+		"Name" : "4756 Sauve",
+		"Category" : "_residential",
+		"SupplierName" : "DeveloperName",
+		"ShortDescription" : "Renovated apartment within walking distance of Sauve metro.",
+		"Weight" : "789",
+		"status" : "A",
+		"Price" : 78.99,
+		"PictureUrl" :"img/product/HT-1114.jpg"
+	}
+]

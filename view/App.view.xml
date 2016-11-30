@@ -1,0 +1,4 @@
+<!--Primary SplitApp view for the app-->
+<View xmlns="sap.m" displayBlock="true">
+	<SplitApp id="splitApp"/>
+</View>
