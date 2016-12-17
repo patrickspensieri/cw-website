@@ -4,12 +4,12 @@
 		"Category" : "_office",
 		"NumberOfProducts" : 2
 	}, {
-		"CategoryName" : "Commercial",
-		"Category" : "_commercial",
+		"CategoryName" : "Industrial",
+		"Category" : "_industrial",
 		"NumberOfProducts" : 2
 	}, {
-		"CategoryName" : "Residential",
-		"Category" : "_residential",
+		"CategoryName" : "Retail",
+		"Category" : "_retail",
 		"NumberOfProducts" : 2
 	}
 ]

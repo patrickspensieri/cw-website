@@ -18,10 +18,12 @@
 				press="handleCartButtonPress">
 			</Button>
 		</headerContent>
+<!--
 		<footer>
 			<Toolbar>
 			</Toolbar>
 		</footer>
+-->
 		<content>
 			<List
 				id="productList"

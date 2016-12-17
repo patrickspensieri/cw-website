@@ -1,6 +1,14 @@
 .invisible {
 	display: none;
 }
+/*remove sapui5 blue branding bar*/
+.sapMShellBrandingBar {
+    height: 0px;
+}
+/*remove sapui5 blue branding bar*/
+.sapMPageHeader::before {
+    border-top-width: 0rem;
+}
 
 .welcomeText {
 	font-size: 1.0rem;

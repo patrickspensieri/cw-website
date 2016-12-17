@@ -68,6 +68,7 @@ sap.ui.define([
 			var oModel = oBindContext.getModel();
 			var sCategoryId = oModel.getData(oBindContext.getPath()).Category;
 			var sProductId = oModel.getData(oBindContext.getPath()).ProductId;
+//            here original
 			this._router.navTo("product", {id: sCategoryId, productId: sProductId}, !Device.system.phone);
 		},
 

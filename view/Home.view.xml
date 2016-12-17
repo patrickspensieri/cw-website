@@ -28,10 +28,12 @@
 				</SearchField>
 			</Toolbar>
 		</subHeader>
+<!--
 		<footer>
 			<Toolbar>
 			</Toolbar>
 		</footer>
+-->
 		<content>
 			<PullToRefresh
 				id="pullToRefresh"
@@ -82,8 +84,44 @@
 					</ObjectListItem>
 				</items>
 			</List>
+            <!-- This list shows the home pages -->
+            <Toolbar>
+				<Button
+					id="welcomeButton"
+                    text="WelcomePage"
+                    press="handleWelcomeButtonPress"
+					width="100%">
+				</Button>
+			</Toolbar>
+<!--
+            <List
+				id="homeList"
+				headerText="{i18n>HOME_PAGE_LIST_HEADER}"
+				mode="None"
+				items="{
+					path : '/HomePages',
+					sorter : {
+						path : 'HomeName',
+						descending: false
+					}
+				}">
+				<items>
+					<StandardListItem
+						title="{HomePageName}"
+						type="Active"
+						press="handleHomePageListItemPress" >
+						<customData>
+							<core:CustomData
+								key="id"
+								value="{HomePage}" />
+						</customData>
+					</StandardListItem>
+				</items>
+			</List>
+-->
+            
 			<!-- This list shows the product categories -->
-			<List
+            <List
 				id="categoryList"
 				headerText="{i18n>HOME_CATEGORY_LIST_HEADER}"
 				mode="None"

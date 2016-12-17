@@ -31,6 +31,11 @@ sap.ui.define([
 						name: "home",
 						target: "home"
 					},
+                    {
+                        pattern: "welcome",
+                        name: "welcome",
+                        target: ["home", "welcomeView"]
+                    },
 					{
 						pattern: "category/{id}",
 						name: "category",
@@ -46,7 +51,7 @@ sap.ui.define([
 						name: "cart",
 						target: "cart"
 					},
-					{
+                    {
 						pattern: "product/{productId}",
 						name: "cartProduct",
 						target: ["home" , "productView"]
@@ -68,9 +73,9 @@ sap.ui.define([
 						viewLevel: 3,
 						controlAggregation: "detailPages"
 					},
-					welcome: {
+					welcomeView: {
 						viewName: "Welcome",
-						viewLevel: 0,
+						viewLevel: 3,
 						controlAggregation: "detailPages"
 					},
 					home: {
@@ -87,9 +92,8 @@ sap.ui.define([
 		},
 
 		init: function () {            
-//            rootPath = jQuery.sap.getModulePath("devCW2");
-//            sap.ui.getCore().loadLibrary("googlemaps", [rootPath,"resources/googlemaps/"].join("/"));
             sap.ui.getCore().loadLibrary("openui5.googlemaps")
+            openui5.googlemaps.ScriptsUtil.setApiKey('AIzaSyB_HBiJ0FxG1JlgD9KwlDNKYZTJ-ulQm_o');
             
 			// call overwritten init (calls createContent)
 			UIComponent.prototype.init.apply(this, arguments);
@@ -130,16 +134,11 @@ sap.ui.define([
 
 			//navigate to initial page for !phone
 			if (!sap.ui.Device.system.phone) {
-				this._router.getTargets().display("welcome");
+				this._router.getTargets().display("welcomeView");
 			}
 
 			// initialize the router
 			this._router.initialize();
-            
-            //load the google maps library and set api key
-//            sap.ui.getCore().loadLibrary("googlemaps", "/resources/");
-            openui5.googlemaps.ScriptsUtil.setApiKey('AIzaSyB_HBiJ0FxG1JlgD9KwlDNKYZTJ-ulQm_o');
-
 		},
 
 		myNavBack : function () {
