@@ -129,7 +129,7 @@ sap.ui.define([
 					Price : oProduct.Price,
 					SupplierName : oProduct.SupplierName,
 					Status : oProduct.status,
-					Weight : oProduct.Weight,
+					sqft : oProduct.sqft,
 					PictureUrl : oProduct.PictureUrl
 				};
 				oCartData.entries[oCartData.entries.length] = oEntry;

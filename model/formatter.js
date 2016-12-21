@@ -2,9 +2,9 @@
 	"use strict";
 
 	var mStatusState = {
-		"A": "Success",
-		"O": "Warning",
-		"D": "Error"
+		"L": "Success",
+		"S": "Success",
+		"O": "Warning"
 	};
 
 	var formatter = {
@@ -27,9 +27,9 @@
 			var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
 
 			var mStatusText = {
-				"A": oBundle.getText("STATUS_A"),
-				"O": oBundle.getText("STATUS_O"),
-				"D": oBundle.getText("STATUS_D")
+				"L": oBundle.getText("STATUS_L"),
+				"S": oBundle.getText("STATUS_S"),
+				"O": oBundle.getText("STATUS_O")
 			};
 
 			return mStatusText[status] || status;

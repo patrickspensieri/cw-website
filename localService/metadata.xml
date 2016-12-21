@@ -39,11 +39,11 @@
 				<Property Name="QuantityUnit" Type="Edm.String" Nullable="false"
 					MaxLength="3" sap:label="Quantity Unit" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
-				<Property Name="Weight" Type="Edm.Decimal" Nullable="false"
-					Precision="13" Scale="3" sap:label="Weight" sap:creatable="false"
+				<Property Name="sqft" Type="Edm.Decimal" Nullable="false"
+					Precision="13" Scale="3" sap:label="sqft" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
-				<Property Name="WeightUnit" Type="Edm.String" Nullable="false"
-					MaxLength="3" sap:label="Weight Unit" sap:creatable="false"
+				<Property Name="sqftUnit" Type="Edm.String" Nullable="false"
+					MaxLength="3" sap:label="sqft Unit" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
 				<Property Name="Price" Type="Edm.Decimal" Nullable="false"
 					Precision="23" Scale="4" sap:label="Price" sap:creatable="false"

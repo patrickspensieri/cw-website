@@ -3,6 +3,7 @@
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:tnt="sap.tnt"
 	xmlns:h="http://www.w3.org/1999/xhtml">
 	<Page
 		id="page"
@@ -40,6 +41,32 @@
 				visible="{device>/isTouch}"
 				refresh="handleRefresh" />
 			<!-- This list shows the search results -->
+<!--            This list shows the welcome page sections-->
+<!--
+            <List
+				id="welcomeList"
+				mode="{device>/listMode}"
+				select="handleWelcomeListSelect"
+				noDataText="{i18n>HOME_NO_DATA}"
+				items="{
+					path : '/Welcome'
+					}
+				}">
+            </List>
+-->
+<!--            NavigationList works, but looks different than the List (replace later)-->
+            <tnt:NavigationList id="navigationList" width="320px">
+                <tnt:NavigationListItem
+                        text="Welcome"
+                        select="handleWelcomeButtonPress">
+                    <tnt:NavigationListItem text="About">
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Our Services">
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Contact Us">
+                    </tnt:NavigationListItem>
+                </tnt:NavigationListItem>
+            </tnt:NavigationList>
 			<List
 				id="productList"
 				mode="{device>/listMode}"
@@ -84,15 +111,6 @@
 					</ObjectListItem>
 				</items>
 			</List>
-            <!-- This list shows the home pages -->
-            <Toolbar>
-				<Button
-					id="welcomeButton"
-                    text="WelcomePage"
-                    press="handleWelcomeButtonPress"
-					width="100%">
-				</Button>
-			</Toolbar>
 <!--
             <List
 				id="homeList"

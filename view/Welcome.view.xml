@@ -13,10 +13,6 @@
 			</Toolbar>
 		</footer>
 		<content>
-			<Text
-				text="{i18n>WELCOME_TEXT}"
-				class="welcomeText" >
-			</Text>
             <gmaps:Map height="250px" zoom="12" lat="-33.895" lng="151.275">
                 <gmaps:markers>
                     <gmaps:Marker lat="-33.895" lng="151.275" info="Bondi Beach" />

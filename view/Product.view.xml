@@ -5,7 +5,8 @@
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:control="control"
-	xmlns:h="http://www.w3.org/1999/xhtml">
+	xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:gmaps="openui5.googlemaps">
 	<Page
 		id="page"
 		title="{Name}"
@@ -42,7 +43,7 @@
 					<ObjectAttribute
 						text="{ShortDescription}" />
 					<ObjectAttribute
-						text="{Weight}g" />
+						text="{sqft}sq ft" />
 				</attributes>
 				<firstStatus>
 					<ObjectStatus
@@ -65,6 +66,11 @@
 					decorative="true"
 					densityAware="false" />
 			</VBox>
+            <gmaps:Map lat="{lat}" lng="{lng}" height="250px" zoom="18">
+                <gmaps:markers>
+                    <gmaps:Marker lat="{lat}" lng="{lng}" info="Bondi Beach" />
+                </gmaps:markers>
+            </gmaps:Map>
 		</content>
 	</Page>
 </mvc:View>
