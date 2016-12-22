@@ -74,7 +74,7 @@
 						iconDensityAware="false" >
 						<attributes>
 							<ObjectAttribute
-								text="by {cartProducts>SupplierName}" />
+								text="by {cartProducts>City}" />
 						</attributes>
 						<firstStatus>
 							<ObjectStatus
@@ -90,7 +90,7 @@
 						<customData>
 							<core:CustomData
 								key="productId"
-								value="{cartProducts>ProductId}" />
+								value="{cartProducts>PropertyId}" />
 						</customData>
 					</ObjectListItem>
 				</items>

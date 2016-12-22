@@ -1,9 +1,9 @@
 [
 	{
-		"ProductId" : "id_1",
-		"Name" : "1184 rue Ste-Catherine Ouest, Montreal",
+		"PropertyId" : "id_1",
+		"Name" : "1184 rue Ste-Catherine Ouest",
 		"Category" : "_office",
-		"SupplierName" : "DeveloperName",
+		"City" : "Montreal",
 		"ShortDescription" : "description",
 		"sqft" : "321",
 		"status" : "L",
@@ -13,22 +13,22 @@
         "lng" : -73.6144921
         
 	}, {
-		"ProductId" : "id_2",
-		"Name" : "4791-4793, boul. Dagenais Ouest, Laval",
+		"PropertyId" : "id_2",
+		"Name" : "4791-4793, boul. Dagenais Ouest",
 		"Category" : "_office",
-		"SupplierName" : "DeveloperName",
+		"City" : "Laval",
 		"ShortDescription" : "description",
 		"sqft" : "301",
 		"status" : "L",
 		"Price" : 399.99,
 		"PictureUrl" :"img/product/HT-1073.jpg",
-        "lat" : 45.5348804,
-        "lng" : -73.6144921
+        "lat" : 45.5521592,
+        "lng" : -73.8596684
 	}, {
-		"ProductId" : "id_3",
+		"PropertyId" : "id_3",
 		"Name" : "152-156, avenue Mozart Est",
 		"Category" : "_industrial",
-		"SupplierName" : "DeveloperName",
+		"City" : "Montreal",
 		"ShortDescription" : "description",
 		"sqft" : "276",
 		"status" : "O",
@@ -37,40 +37,40 @@
         "lat" : 45.5348804,
         "lng" : -73.6144921
 	}, {
-		"ProductId" : "id_4",
+		"PropertyId" : "id_4",
 		"Name" : "509-521, boul. Rosemont, Montreal",
 		"Category" : "_industrial",
-		"SupplierName" : "DeveloperName",
+		"City" : "Montreal",
 		"ShortDescription" : "description",
 		"sqft" : "700",
 		"status" : "S",
 		"Price" : 59,
 		"PictureUrl" :"img/product/HT-1112.jpg",
-        "lat" : 45.5348804,
-        "lng" : -73.6144921
+        "lat" : 45.532167,
+        "lng" : -73.5998272
 	}, {
-		"ProductId" : "id_5",
-		"Name" : "4074-4086, rue Wellington, Verdun",
+		"PropertyId" : "id_5",
+		"Name" : "4074-4086, rue Wellington",
 		"Category" : "_retail",
-		"SupplierName" : "DeveloperName",
+		"City" : "Montreal",
 		"ShortDescription" : "description",
 		"sqft" : "40",
 		"status" : "S",
 		"Price" : 13.49,
 		"PictureUrl" :"img/product/HT-1111.jpg",
-        "lat" : 45.5348804,
-        "lng" : -73.6144921
+        "lat" : 45.462939,
+        "lng" : -73.5690244
 	}, {
-		"ProductId" : "id_6",
-		"Name" : "1480, boul. St-Jean Baptiste, Montreal",
+		"PropertyId" : "id_6",
+		"Name" : "1480, boul. St-Jean Baptiste",
 		"Category" : "_retail",
-		"SupplierName" : "DeveloperName",
+		"City" : "Montreal",
 		"ShortDescription" : "description",
 		"sqft" : "789",
 		"status" : "L",
 		"Price" : 78.99,
 		"PictureUrl" :"img/product/HT-1114.jpg",
-        "lat" : 45.5348804,
-        "lng" : -73.6144921
+        "lat" : 45.6421927,
+        "lng" : -73.5064827
 	}
 ]

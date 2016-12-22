@@ -110,7 +110,7 @@ sap.ui.define([
 		_showProduct: function (oItem) {
 			var oBindContext = oItem.getBindingContext();
 			var oModel = oBindContext.getModel();
-			var sId = oModel.getData(oBindContext.getPath()).ProductId;
+			var sId = oModel.getData(oBindContext.getPath()).PropertyId;
 			this._router.navTo("cartProduct", {productId: sId}, !sap.ui.Device.system.phone);
 		},
 

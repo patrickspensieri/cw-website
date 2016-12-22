@@ -112,7 +112,7 @@ sap.ui.define([
 			// find existing entry for product
 			var oEntry = null;
 			for (var i = 0 ; i < aCartEntries.length ; i ++) {
-				if (aCartEntries[i].ProductId === oProduct.ProductId) {
+				if (aCartEntries[i].PropertyId === oProduct.PropertyId) {
 					oEntry = aCartEntries[i];
 					break;
 				}
@@ -124,10 +124,10 @@ sap.ui.define([
 					Id : jQuery.sap.uid(),
 					Quantity : 1,
 					Name : oProduct.Name,
-					ProductId : oProduct.ProductId,
+					PropertyId : oProduct.PropertyId,
 					ProductName : oProduct.Name,
 					Price : oProduct.Price,
-					SupplierName : oProduct.SupplierName,
+					City : oProduct.City,
 					Status : oProduct.status,
 					sqft : oProduct.sqft,
 					PictureUrl : oProduct.PictureUrl

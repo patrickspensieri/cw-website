@@ -26,7 +26,7 @@ sap.ui.define([
 			var oBinding = oProductList.getBinding("items");
 			oBinding.attachDataReceived(this.fnDataReceived, this);
 			var sId = oEvent.getParameter("arguments").id;
-			this._sProductId = oEvent.getParameter("arguments").productId;
+			this._sPropertyId = oEvent.getParameter("arguments").productId;
 			this.getView().byId("page").setTitle(sId);
 			var oFilter = new Filter("Category", FilterOperator.EQ, sId);
 			oBinding.filter([ oFilter ]);
@@ -43,7 +43,7 @@ sap.ui.define([
 				oList = this.getView().byId("productList");
 			var aListItems = oList.getItems();
 			aListItems.some(function(oItem) {
-				if (oItem.getBindingContext().sPath === "/Products('" + that._sProductId + "')") {
+				if (oItem.getBindingContext().sPath === "/Products('" + that._sPropertyId + "')") {
 					oList.setSelectedItem(oItem);
 					return true;
 				}
@@ -67,9 +67,9 @@ sap.ui.define([
 			}
 			var oModel = oBindContext.getModel();
 			var sCategoryId = oModel.getData(oBindContext.getPath()).Category;
-			var sProductId = oModel.getData(oBindContext.getPath()).ProductId;
+			var sPropertyId = oModel.getData(oBindContext.getPath()).PropertyId;
 //            here original
-			this._router.navTo("product", {id: sCategoryId, productId: sProductId}, !Device.system.phone);
+			this._router.navTo("product", {id: sCategoryId, productId: sPropertyId}, !Device.system.phone);
 		},
 
 		handleNavButtonPress : function () {

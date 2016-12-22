@@ -95,7 +95,7 @@
 						press="handleProductListItemPress"
 						iconDensityAware="false" >
 						<attributes>
-							<ObjectAttribute text="{SupplierName}"/>
+							<ObjectAttribute text="{City}"/>
 						</attributes>
 						<firstStatus>
 							<ObjectStatus

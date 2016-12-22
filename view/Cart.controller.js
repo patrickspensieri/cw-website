@@ -79,7 +79,7 @@ sap.ui.define([
 			// send event to refresh
 			var sPath = item.getBindingContext("cartProducts").getPath();
 			var oEntry = this.getView().getModel("cartProducts").getProperty(sPath);
-			var sId = oEntry.ProductId;
+			var sId = oEntry.PropertyId;
 			if (!sap.ui.Device.system.phone) {
 				this._router.getTargets().display("productView");
 				var bus = sap.ui.getCore().getEventBus();

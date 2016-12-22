@@ -9,12 +9,12 @@
 			<EntityType Name="Product" sap:content-version="1"
 				xmlns:sap="http://www.sap.com/Protocols/SAPData">
 				<Key>
-					<PropertyRef Name="ProductId" />
+					<PropertyRef Name="PropertyId" />
 				</Key>
 				<Property Name="CategoryName" Type="Edm.String" Nullable="false"
 					MaxLength="255" sap:label="Cantegroy name" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
-				<Property Name="ProductId" Type="Edm.String" Nullable="false"
+				<Property Name="PropertyId" Type="Edm.String" Nullable="false"
 					MaxLength="10" sap:label="Product ID" sap:creatable="false"
 					sap:updatable="false" />
 				<Property Name="Category" Type="Edm.String" Nullable="false"
@@ -33,7 +33,7 @@
 				<Property Name="SupplierId" Type="Edm.String" Nullable="false"
 					MaxLength="10" sap:label="Business Partner ID" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
-				<Property Name="SupplierName" Type="Edm.String" Nullable="false"
+				<Property Name="City" Type="Edm.String" Nullable="false"
 					MaxLength="80" sap:label="Company Name" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
 				<Property Name="QuantityUnit" Type="Edm.String" Nullable="false"
