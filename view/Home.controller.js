@@ -63,7 +63,6 @@ sap.ui.define([
 				}
 			}
 		},
-
 		_changeNoDataTextToIndicateLoading: function (oList) {
 			var sOldNoDataText = oList.getNoDataText();
 			oList.setNoDataText("Loading...");
@@ -72,7 +71,7 @@ sap.ui.define([
 			});
 		},
         
-        handleWelcomeButtonPress: function(oEvent){
+        handleWelcomeListItemPress: function(oEvent){
 //            this._router.navTo("welcome"); 
             this._router.getTargets().display("welcomeView");
 

@@ -40,33 +40,24 @@
 				id="pullToRefresh"
 				visible="{device>/isTouch}"
 				refresh="handleRefresh" />
-			<!-- This list shows the search results -->
-<!--            This list shows the welcome page sections-->
-<!--
+            <!-- welcome page sections-->
             <List
-				id="welcomeList"
-				mode="{device>/listMode}"
-				select="handleWelcomeListSelect"
-				noDataText="{i18n>HOME_NO_DATA}"
+				id="welcomePageSectionList"
+				headerText="Welcome"
+				mode="None"
 				items="{
-					path : '/Welcome'
-					}
+					path : '/WelcomePageSections'
 				}">
-            </List>
--->
-<!--            NavigationList works, but looks different than the List (replace later)-->
-            <tnt:NavigationList id="navigationList" width="320px">
-                <tnt:NavigationListItem
-                        text="Welcome"
-                        select="handleWelcomeButtonPress">
-                    <tnt:NavigationListItem text="About">
-                    </tnt:NavigationListItem>
-                    <tnt:NavigationListItem text="Our Services">
-                    </tnt:NavigationListItem>
-                    <tnt:NavigationListItem text="Contact Us">
-                    </tnt:NavigationListItem>
-                </tnt:NavigationListItem>
-            </tnt:NavigationList>
+				<items>
+					<StandardListItem
+						title="{Section}"
+                        icon="{Icon}"
+						type="Navigation"
+						press="handleWelcomeListItemPress" >
+					</StandardListItem>
+				</items>
+			</List>
+            <!-- product search results -->
 			<List
 				id="productList"
 				mode="{device>/listMode}"
@@ -82,16 +73,12 @@
 				<items>
 					<ObjectListItem
 						type="{device>/listItemType}"
-						icon="{
-							path : 'PictureUrl',
-							formatter : '.formatter.pictureUrl'
-						}"
 						title="{Name}"
 						number="{
 							path : 'Price',
 							formatter : '.formatter.price'
 						}"
-						numberUnit="EUR"
+						numberUnit="CAD"
 						press="handleProductListItemPress"
 						iconDensityAware="false" >
 						<attributes>
@@ -111,34 +98,8 @@
 					</ObjectListItem>
 				</items>
 			</List>
-<!--
-            <List
-				id="homeList"
-				headerText="{i18n>HOME_PAGE_LIST_HEADER}"
-				mode="None"
-				items="{
-					path : '/HomePages',
-					sorter : {
-						path : 'HomeName',
-						descending: false
-					}
-				}">
-				<items>
-					<StandardListItem
-						title="{HomePageName}"
-						type="Active"
-						press="handleHomePageListItemPress" >
-						<customData>
-							<core:CustomData
-								key="id"
-								value="{HomePage}" />
-						</customData>
-					</StandardListItem>
-				</items>
-			</List>
--->
             
-			<!-- This list shows the product categories -->
+			<!-- product categories -->
             <List
 				id="categoryList"
 				headerText="{i18n>HOME_CATEGORY_LIST_HEADER}"
@@ -154,6 +115,7 @@
 					<StandardListItem
 						title="{CategoryName}"
 						type="Active"
+                        icon="{Icon}"
 						counter="{NumberOfProducts}"
 						press="handleCategoryListItemPress" >
 						<customData>

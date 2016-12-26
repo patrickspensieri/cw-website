@@ -1,0 +1,13 @@
+[
+	{
+		"Section" : "About",
+        "Icon" : "sap-icon://hint"
+	}, {
+
+		"Section" : "Our Services",
+        "Icon" : "sap-icon://wrench"
+	}, {
+		"Section" : "Contact Us",
+        "Icon" : "sap-icon://call"
+	}
+]

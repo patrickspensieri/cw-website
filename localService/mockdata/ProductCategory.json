@@ -2,14 +2,17 @@
 	{
 	"CategoryName" : "Office",
 		"Category" : "_office",
+        "Icon" : "sap-icon://building",
 		"NumberOfProducts" : 2
 	}, {
 		"CategoryName" : "Industrial",
 		"Category" : "_industrial",
+        "Icon" : "sap-icon://factory",
 		"NumberOfProducts" : 2
 	}, {
 		"CategoryName" : "Retail",
 		"Category" : "_retail",
+        "Icon" : "sap-icon://retail-store",
 		"NumberOfProducts" : 2
 	}
 ]

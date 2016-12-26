@@ -92,6 +92,16 @@
 					Nullable="false" sap:creatable="false" sap:updatable="false"
 					sap:sortable="false" sap:filterable="false" />
 			</EntityType>
+            
+            <EntityType Name="WelcomeSection" sap:content-version="1"
+				xmlns:sap="http://www.sap.com/Protocols/SAPData">
+				<Key>
+					<PropertyRef Name="Section" />
+				</Key>
+				<Property Name="Section" Type="Edm.String" Nullable="false"
+					MaxLength="40" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+			</EntityType>
 
 			<EntityContainer Name="EPM_DEVELOPER_SCENARIO_SRV"
 				m:IsDefaultEntityContainer="true">
@@ -101,6 +111,11 @@
 					xmlns:sap="http://www.sap.com/Protocols/SAPData" />
 				<EntitySet Name="ProductCategories"
 					EntityType="EPM_DEVELOPER_SCENARIO_SRV.ProductCategory"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"
+					xmlns:sap="http://www.sap.com/Protocols/SAPData" />
+              <EntitySet Name="WelcomePageSections"
+					EntityType="EPM_DEVELOPER_SCENARIO_SRV.WelcomeSection"
 					sap:creatable="false" sap:updatable="false" sap:deletable="false"
 					sap:pageable="false" sap:content-version="1"
 					xmlns:sap="http://www.sap.com/Protocols/SAPData" />
