@@ -1,23 +1,61 @@
-<!--Landing page with exploratory map-->
-<mvc:View
-	controllerName="ui.view.Welcome"
-	xmlns="sap.m"
-	xmlns:core="sap.ui.core"
-	xmlns:mvc="sap.ui.core.mvc" 
-    xmlns:gmaps="openui5.googlemaps">
-	<Page
-		title="{i18n>WELCOME_TITLE}"
-		enableScrolling="false">
-		<footer>
-			<Toolbar>
-			</Toolbar>
-		</footer>
-		<content>
-            <gmaps:Map height="250px" zoom="12" lat="-33.895" lng="151.275">
-                <gmaps:markers>
-                    <gmaps:Marker lat="-33.895" lng="151.275" info="Bondi Beach" />
-                </gmaps:markers>
-            </gmaps:Map>
-		</content>
-	</Page>
+<!--Home page-->
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+		   xmlns="sap.uxap"
+		   xmlns:m="sap.m"
+		   height="100%">
+	<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
+		<headerTitle>
+			<ObjectPageHeader objectTitle="CW Website">
+			</ObjectPageHeader>
+		</headerTitle>
+ 
+		<headerContent>
+			<m:ObjectAttribute title="" text="A money mission statement"/>
+		</headerContent>
+ 
+		<sections>
+            <!-- About -->
+			<ObjectPageSection title="About">
+				<subSections>
+					<ObjectPageSubSection title="">
+						<blocks>
+							<m:Button text="testBtn"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+            
+            <!-- Our Services -->
+			<ObjectPageSection title="Our Services">
+                <subSections>
+					<ObjectPageSubSection title="Industrial">
+						<blocks>
+							<m:Button text="testBtn"/>
+						</blocks>
+					</ObjectPageSubSection>
+                    <ObjectPageSubSection title="Office">
+						<blocks>
+							<m:Button text="testBtn"/>
+						</blocks>
+					</ObjectPageSubSection>
+                    <ObjectPageSubSection title="Residential">
+						<blocks>
+							<m:Button text="testBtn"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+            
+            <!-- Contact Us -->
+			<ObjectPageSection title="Contact Us">
+				<subSections>
+					<ObjectPageSubSection title="">
+						<blocks>
+							<m:Button text="testBtn"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
 </mvc:View>
