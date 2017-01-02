@@ -12,7 +12,7 @@
 		<headerContent>
 <!--            cart button-->
 			<Button
-				icon="sap-icon://cart"
+				icon="sap-icon://email"
 				tooltip="{i18n>TO_CART_BUTTON_TOOLTIP}"
 				press="handleCartButtonPress">
 			</Button>

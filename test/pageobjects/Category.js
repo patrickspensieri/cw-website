@@ -24,7 +24,7 @@ sap.ui.define([
 						return this.waitFor({
 							viewName : "Category",
 							controlType : "sap.m.Button",
-							matchers : new PropertyStrictEquals({name : "icon", value : "sap-icon://cart"}),
+							matchers : new PropertyStrictEquals({name : "icon", value : "sap-icon://email"}),
 							actions : new Press(),
 							errorMessage : "The cart button was not found and could not be pressed"
 						});

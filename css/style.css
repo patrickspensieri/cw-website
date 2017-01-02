@@ -70,5 +70,26 @@
     padding: 1rem;
     /*box-shadow from https://getmdl.io */
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-    
 }
+/*remove bottom border from list item (home.view.xml)*/
+/*
+.sapMLIB {
+    border-bottom: none;
+}*/
+/*remove bottom border from list header (home.view.xml)*/
+/*
+.sapMListHdr {
+    border-bottom: none; 
+}
+*/
+/*set background color for ObjectPage (Welcome.view.xml)*/
+/*
+.sapUxAPObjectPageContainer {
+    background-color: #ffffff !important;
+}
+*/
+/*remove border from search bar (Welcome.view.xml)*/
+/*
+.sapMSFF {
+    border: none;
+}*/

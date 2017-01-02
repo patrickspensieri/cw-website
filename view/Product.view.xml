@@ -14,7 +14,7 @@
         showHeader="true">
 		<headerContent>
 			<Button
-				icon="sap-icon://cart"
+				icon="sap-icon://email"
 				visible="{device>/isPhone}"
 				tooltip="{i18n>TO_CART_BUTTON_TOOLTIP}"
 				press="handleCartButtonPress" />
@@ -70,7 +70,7 @@
 					densityAware="false" />
 			</VBox>
 -->
-            <gmaps:Map lat="{lat}" lng="{lng}" height="250px" zoom="18">
+            <gmaps:Map lat="{lat}" lng="{lng}" height="250px" zoom="18" class="materialCardNoHover">
                 <gmaps:markers>
                     <gmaps:Marker lat="{lat}" lng="{lng}" info="Bondi Beach" />
                 </gmaps:markers>

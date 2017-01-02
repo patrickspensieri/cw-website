@@ -53,7 +53,7 @@ ui.test.action.BuyProductJourneyAction = sap.ui.test.Opa5.extend("ui.test.action
 					controlType : "sap.m.Button",
 					matchers : new sap.ui.test.matchers.PropertyStrictEquals({
 						name : "icon",
-						value : "sap-icon://cart"
+						value : "sap-icon://email"
 					}),
 					actions : new sap.ui.test.actions.Press(),
 					errorMessage : "did not find the cart button"
