@@ -2,17 +2,21 @@ sap.ui.define([
 	'sap/ui/core/mvc/Controller',
 	'ui/model/formatter',
 	'sap/ui/model/Filter',
-	'sap/ui/model/FilterOperator'
+	'sap/ui/model/FilterOperator',
+    'sap/ui/model/resource/ResourceModel'
 ], function (Controller,
 			 formatter,
 			 Filter,
-			 FilterOperator) {
+			 FilterOperator,
+             ResourceModel) {
 	"use strict";
 
 	return Controller.extend("ui.view.Home", {
 		formatter : formatter,
 
 		onInit: function () {
+            //set text for languageMenuButton
+            this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
 			var oComponent = this.getOwnerComponent();
 			this._router = oComponent.getRouter();
 			// trigger first search to set visibilities right
@@ -115,6 +119,13 @@ sap.ui.define([
 
 		handleCartButtonPress: function () {
 			this._router.navTo("cart");
-		}
+		},
+        
+        onLanguageMenuAction: function() {
+            alert("called FR");
+            sap.ui.getCore().getConfiguration().setLanguage("FR");
+            this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
+        },
+
 	});
 });

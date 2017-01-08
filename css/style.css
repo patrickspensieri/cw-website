@@ -1,3 +1,13 @@
+/*CUSTOM*/
+/*material card design no hover*/
+.materialCardNoHover{
+    margin: 1rem;
+    padding: 1rem;
+    /*box-shadow from https://getmdl.io */
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+/*GLOBAL*/
+/*sets visibility of search results to false*/
 .invisible {
 	display: none;
 }
@@ -14,82 +24,23 @@
 	font-size: 1.0rem;
 	margin: 2rem;
 }
-
-.welcomeIcon {
-
-	margin: 0.5rem;
-	color: #DDDDDD;
-	opacity: 1;
-
-	/* transition: IE10, Opera, Firefox, Chrome 26  */
-	transition:
-		color 2.5s ease-in-out,
-		transform 2.5s ease-in-out,
-		-webkit-transform 2.5s ease-in-out,
-		opacity 5s ease-in-out;
-
-	/* -webkit-transition: Safari, Android Browser, BB Browser, Chrome 25 */
-	-webkit-transition:
-		color 2.5s ease-in-out,
-		-webkit-transform 2.5s ease-in-out,
-		opacity 8s ease-in-out;
-}
-
-.welcomeIconRotateForward {
-
-	color: rgb(51,51,51);
-
-	/* transform: IE10, Opera, Firefox */
-	transform: rotate(360deg);
-
-	/* -webkit-transform: Chrome, Safari, Android Browser, BB Browser */
-	-webkit-transform: rotate(360deg);
-}
-
-.welcomeIconRotateBackward {
-	color: #009de0;
-	transform: rotate(-360deg);
-	-webkit-transform: rotate(-360deg);
-}
-
-.welcomeIconFade {
-	opacity: 0;
-}
-
 /*object header shadows products page*/
 .sapMOH{
-    margin: 1rem;
-    padding: 1rem;
-    /*box-shadow from https://getmdl.io */
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-/*material card design no hover*/
-.materialCardNoHover{
-    margin: 1rem;
-    padding: 1rem;
     /*box-shadow from https://getmdl.io */
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 /*remove bottom border from list item (home.view.xml)*/
-/*
 .sapMLIB {
     border-bottom: none;
-}*/
-/*remove bottom border from list header (home.view.xml)*/
-/*
+}
 .sapMListHdr {
     border-bottom: none; 
 }
-*/
 /*set background color for ObjectPage (Welcome.view.xml)*/
-/*
 .sapUxAPObjectPageContainer {
     background-color: #ffffff !important;
 }
-*/
 /*remove border from search bar (Welcome.view.xml)*/
-/*
 .sapMSFF {
     border: none;
-}*/
+}

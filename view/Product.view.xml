@@ -11,7 +11,8 @@
 		id="page"
 		showNavButton="{device>/isPhone}"
 		navButtonPress="handleNavButtonPress" 
-        showHeader="true">
+        showHeader="false">
+<!--
 		<headerContent>
 			<Button
 				icon="sap-icon://email"
@@ -19,6 +20,7 @@
 				tooltip="{i18n>TO_CART_BUTTON_TOOLTIP}"
 				press="handleCartButtonPress" />
 		</headerContent>
+-->
 		<footer>
 			<Toolbar>
 				<ToolbarSpacer/>

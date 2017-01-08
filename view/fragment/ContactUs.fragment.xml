@@ -1,0 +1,41 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core">
+    <l:Grid defaultSpan="L6 M12 S12">
+		<l:content>
+            <!--  Marco Romano-->
+            <List class="materialCardNoHover"
+                headerText="Marco Romano">
+                <DisplayListItem
+                    label="Phone"
+                    value="514-123-4567"
+                    type="Navigation"/>
+                <DisplayListItem
+                    label="Email"
+                    value="marco.romano@test.ca"
+                    type="Navigation"/>
+                <DisplayListItem
+                    label="Address"
+                    value="999 de Maisonneuve Blvd W. bureau 1500 Montreal, QC H3A 3L4"
+                    type="Navigation" />
+            </List>
+            <!--  Joe Rullier-->
+            <List class="materialCardNoHover"
+                headerText="Joe Rullier">
+                <DisplayListItem
+                    label="Phone"
+                    value="514-123-4567"
+                    type="Navigation"/>
+                <DisplayListItem
+                    label="Email"
+                    value="joe.rullier@test.ca"
+                    type="Navigation"/>
+                <DisplayListItem
+                    label="Address"
+                    value="999 de Maisonneuve Blvd W. bureau 1500 Montreal, QC H3A 3L4"
+                    type="Navigation" />
+            </List>
+        </l:content>
+	</l:Grid>
+</core:FragmentDefinition>

@@ -99,10 +99,7 @@ sap.ui.define([
 			UIComponent.prototype.init.apply(this, arguments);
 
 			// set i18n model
-			var oI18nModel = new ResourceModel({
-				bundleName: "ui.i18n.appTexts"
-			});
-			this.setModel(oI18nModel, "i18n");
+			this.setLanguageB("EN");
 
 			var oModel = new ODataModel("/sap/opu/odata/IWBEP/EPM_DEVELOPER_SCENARIO_SRV/", true);
 			oModel.setDefaultCountMode("None");
@@ -150,6 +147,17 @@ sap.ui.define([
 				this._router.navTo("home", {}, true);
 			}
 		},
+        
+        setLanguageB : function(lan) {
+            // set i18n model
+			var i18n = new ResourceModel({
+				bundleName: "ui.i18n.i18n"
+			});
+            //using the CORE throws an error at the moment
+//            sap.ui.getCore().setModel(i18n, "i18n");
+            sap.ui.getCore().getConfiguration().setLanguage(lan);
+            this.setModel(i18n, "i18n");
+        },
 
 		createContent: function () {
 			// create root view

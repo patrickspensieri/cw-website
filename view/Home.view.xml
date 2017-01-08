@@ -41,7 +41,7 @@
 				visible="{device>/isTouch}"
 				refresh="handleRefresh" />
             <!-- welcome page sections-->
-            <List
+            <List 
 				id="welcomePageSectionList"
 				headerText="Welcome"
 				mode="None"
@@ -99,7 +99,7 @@
 				</items>
 			</List>
             
-			<!-- product categories -->
+			<!-- spaces -->
             <List
 				id="categoryList"
 				headerText="{i18n>HOME_CATEGORY_LIST_HEADER}"
@@ -126,6 +126,17 @@
 					</StandardListItem>
 				</items>
 			</List>
+            <!-- language menu-->
+            <MenuButton id="languageMenuButton" text="" icon="sap-icon://world">
+            <menu>
+                <Menu itemSelected="onLanguageMenuAction">
+                    <items>
+                        <MenuItem text="EN" />
+                        <MenuItem text="FR" />
+                    </items>
+                </Menu>
+            </menu>
+        </MenuButton>
 		</content>
 	</Page>
 </mvc:View>
