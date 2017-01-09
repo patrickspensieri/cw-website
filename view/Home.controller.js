@@ -3,12 +3,14 @@ sap.ui.define([
 	'ui/model/formatter',
 	'sap/ui/model/Filter',
 	'sap/ui/model/FilterOperator',
-    'sap/ui/model/resource/ResourceModel'
+    'sap/ui/model/resource/ResourceModel',
+    'sap/m/MessageToast'
 ], function (Controller,
 			 formatter,
 			 Filter,
 			 FilterOperator,
-             ResourceModel) {
+             ResourceModel,
+             MessageToast) {
 	"use strict";
 
 	return Controller.extend("ui.view.Home", {
@@ -121,10 +123,16 @@ sap.ui.define([
 			this._router.navTo("cart");
 		},
         
-        onLanguageMenuAction: function() {
-            alert("called FR");
-            sap.ui.getCore().getConfiguration().setLanguage("FR");
-            this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
+        onLanguageMenuAction: function(oEvent) {
+            //get selected language and pass param
+            var oItem = oEvent.getParameter("item");
+            if(oItem instanceof sap.m.MenuItem){
+                sap.ui.getCore().getConfiguration().setLanguage(oItem.getText());
+                this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
+                // show message toast
+                var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+                MessageToast.show(oBundle.getText("LANGUAGE_CHANGED"));
+            }
         },
 
 	});

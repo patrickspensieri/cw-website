@@ -12,15 +12,6 @@
 		showNavButton="{device>/isPhone}"
 		navButtonPress="handleNavButtonPress" 
         showHeader="false">
-<!--
-		<headerContent>
-			<Button
-				icon="sap-icon://email"
-				visible="{device>/isPhone}"
-				tooltip="{i18n>TO_CART_BUTTON_TOOLTIP}"
-				press="handleCartButtonPress" />
-		</headerContent>
--->
 		<footer>
 			<Toolbar>
 				<ToolbarSpacer/>
@@ -61,17 +52,6 @@
 						}" />
 				</firstStatus>
 			</ObjectHeader>
-<!--
-			<VBox alignItems="Center">
-				<Image
-					src= "{
-							path : 'PictureUrl',
-							formatter : '.formatter.pictureUrl'
-						}"
-					decorative="true"
-					densityAware="false" />
-			</VBox>
--->
             <gmaps:Map lat="{lat}" lng="{lng}" height="250px" zoom="18" class="materialCardNoHover">
                 <gmaps:markers>
                     <gmaps:Marker lat="{lat}" lng="{lng}" info="Bondi Beach" />

@@ -6,10 +6,23 @@
     /*box-shadow from https://getmdl.io */
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
-/*GLOBAL*/
 /*sets visibility of search results to false*/
 .invisible {
 	display: none;
+}
+/*change color of footer*/
+footer{
+    background-color: default;
+}
+
+/*GLOBAL*/
+/*remove border atop footers*/
+.sapContrast.sapMIBar-CTX.sapMFooter-CTX, .sapContrast .sapMIBar-CTX.sapMFooter-CTX {
+     border-top: none; 
+}
+/*remove bottom border between subsections on Object Page*/
+.sapUxAPObjectPageSubSection{
+    border-bottom: none;
 }
 /*remove sapui5 blue branding bar*/
 .sapMShellBrandingBar {

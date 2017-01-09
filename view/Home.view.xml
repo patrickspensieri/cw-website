@@ -29,12 +29,22 @@
 				</SearchField>
 			</Toolbar>
 		</subHeader>
-<!--
-		<footer>
+        <footer>
 			<Toolbar>
+				<ToolbarSpacer/>
+                 <!-- language menu-->
+                <MenuButton id="languageMenuButton" text="" icon="sap-icon://world">
+                <menu>
+                    <Menu itemSelected="onLanguageMenuAction">
+                        <items>
+                            <MenuItem text="EN" />
+                            <MenuItem text="FR" />
+                        </items>
+                    </Menu>
+                </menu>
+            </MenuButton>
 			</Toolbar>
 		</footer>
--->
 		<content>
 			<PullToRefresh
 				id="pullToRefresh"
@@ -126,17 +136,6 @@
 					</StandardListItem>
 				</items>
 			</List>
-            <!-- language menu-->
-            <MenuButton id="languageMenuButton" text="" icon="sap-icon://world">
-            <menu>
-                <Menu itemSelected="onLanguageMenuAction">
-                    <items>
-                        <MenuItem text="EN" />
-                        <MenuItem text="FR" />
-                    </items>
-                </Menu>
-            </menu>
-        </MenuButton>
 		</content>
 	</Page>
 </mvc:View>
