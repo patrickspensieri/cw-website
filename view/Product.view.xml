@@ -3,6 +3,7 @@
 	controllerName="ui.view.Product"
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:control="control"
 	xmlns:h="http://www.w3.org/1999/xhtml"
@@ -33,10 +34,6 @@
 				<attributes>
 					<ObjectAttribute
 						text="{City}" />
-<!--
-					<ObjectAttribute
-						text="{ShortDescription}" />
--->
 					<ObjectAttribute
 						text="{sqft}sq ft" />
 				</attributes>
@@ -52,11 +49,16 @@
 						}" />
 				</firstStatus>
 			</ObjectHeader>
-            <gmaps:Map lat="{lat}" lng="{lng}" height="250px" zoom="18" class="materialCardNoHover">
-                <gmaps:markers>
-                    <gmaps:Marker lat="{lat}" lng="{lng}" info="Bondi Beach" />
-                </gmaps:markers>
-            </gmaps:Map>
+            <l:Grid defaultSpan="L6 M12 S12">
+                <l:content>
+                    <gmaps:Map lat="{lat}" lng="{lng}" height="400px" width="700px" zoom="18" class="materialCardNoHover">
+                        <gmaps:markers>
+                            <gmaps:Marker lat="{lat}" lng="{lng}" info="Bondi Beach" />
+                        </gmaps:markers>
+                    </gmaps:Map>
+                    <Image src="{streetViewUrl}" class="materialCardNoHover"></Image> 
+                </l:content>
+            </l:Grid>
 		</content>
 	</Page>
 </mvc:View>

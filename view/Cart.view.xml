@@ -62,8 +62,8 @@
 						intro="{cartProducts>Quantity} x"
 						type="{cfg>/listItemType}"
 						icon="{
-							path : 'cartProducts>PictureUrl',
-							formatter : '.formatter.pictureUrl'
+							path : 'cartProducts>streetViewUrl',
+							formatter : '.formatter.streetViewUrl'
 						}"
 						title="{cartProducts>Name}"
 						number="{
@@ -123,7 +123,7 @@
 						</f:FormElement>
 						<f:FormElement label="Message">
 							<f:fields>
-								<Input value="{City}" />
+								<TextArea value="{City}" growing="true"/>
 							</f:fields>
 						</f:FormElement>
 					</f:formElements>

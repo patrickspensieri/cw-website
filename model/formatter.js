@@ -39,7 +39,7 @@
 			return mStatusState[status] || "None";
 		},
 
-		pictureUrl: function (sUrl) {
+		streetViewUrl: function (sUrl) {
 			return jQuery.sap.getResourcePath("ui/" + sUrl);
 		}
 	};

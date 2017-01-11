@@ -130,7 +130,7 @@ sap.ui.define([
 					City : oProduct.City,
 					Status : oProduct.status,
 					sqft : oProduct.sqft,
-					PictureUrl : oProduct.PictureUrl
+					streetViewUrl : oProduct.streetViewUrl
 				};
 				oCartData.entries[oCartData.entries.length] = oEntry;
 

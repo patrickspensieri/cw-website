@@ -1,4 +1,8 @@
 /*CUSTOM*/
+/*remove dotted outline on click*/
+:focus {
+  outline-style: none !important ;
+}
 /*material card design no hover*/
 .materialCardNoHover{
     margin: 1rem;
@@ -16,6 +20,9 @@ footer{
 }
 
 /*GLOBAL*/
+/*add shadow to right of master detail (Home.view.xml)*/
+.sapMNav{
+}
 /*remove border atop footers*/
 .sapContrast.sapMIBar-CTX.sapMFooter-CTX, .sapContrast .sapMIBar-CTX.sapMFooter-CTX {
      border-top: none; 

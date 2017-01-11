@@ -8,9 +8,9 @@
 		"sqft" : "321",
 		"status" : "L",
 		"Price" : 81.70,
-		"PictureUrl" : "img/product/HT-1071.jpg",
         "lat" : 45.5348804,
-        "lng" : -73.6144921
+        "lng" : -73.6144921,
+        "streetViewUrl" : "https://maps.googleapis.com/maps/api/streetview?size=700x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=AIzaSyDu8nL9gXxnT6OgMwrq5adYefhUwc2km3w" 
         
 	}, {
 		"PropertyId" : "id_2",
@@ -21,9 +21,9 @@
 		"sqft" : "301",
 		"status" : "L",
 		"Price" : 399.99,
-		"PictureUrl" :"img/product/HT-1073.jpg",
         "lat" : 45.5521592,
-        "lng" : -73.8596684
+        "lng" : -73.8596684,
+        "streetViewUrl" : "https://maps.googleapis.com/maps/api/streetview?size=700x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=AIzaSyDu8nL9gXxnT6OgMwrq5adYefhUwc2km3w"
 	}, {
 		"PropertyId" : "id_3",
 		"Name" : "152-156, avenue Mozart Est",
@@ -33,9 +33,9 @@
 		"sqft" : "276",
 		"status" : "O",
 		"Price" : 219,
-		"PictureUrl" :"img/product/HT-1072.jpg",
         "lat" : 45.5348804,
-        "lng" : -73.6144921
+        "lng" : -73.6144921,
+        "streetViewUrl" : "https://maps.googleapis.com/maps/api/streetview?size=700x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=AIzaSyDu8nL9gXxnT6OgMwrq5adYefhUwc2km3w"
 	}, {
 		"PropertyId" : "id_4",
 		"Name" : "509-521, boul. Rosemont, Montreal",
@@ -45,9 +45,9 @@
 		"sqft" : "700",
 		"status" : "S",
 		"Price" : 59,
-		"PictureUrl" :"img/product/HT-1112.jpg",
         "lat" : 45.532167,
-        "lng" : -73.5998272
+        "lng" : -73.5998272,
+        "streetViewUrl" : "https://maps.googleapis.com/maps/api/streetview?size=700x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=AIzaSyDu8nL9gXxnT6OgMwrq5adYefhUwc2km3w"
 	}, {
 		"PropertyId" : "id_5",
 		"Name" : "4074-4086, rue Wellington",
@@ -57,9 +57,9 @@
 		"sqft" : "40",
 		"status" : "S",
 		"Price" : 13.49,
-		"PictureUrl" :"img/product/HT-1111.jpg",
         "lat" : 45.462939,
-        "lng" : -73.5690244
+        "lng" : -73.5690244,
+        "streetViewUrl" : "https://maps.googleapis.com/maps/api/streetview?size=700x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=AIzaSyDu8nL9gXxnT6OgMwrq5adYefhUwc2km3w"
 	}, {
 		"PropertyId" : "id_6",
 		"Name" : "1480, boul. St-Jean Baptiste",
@@ -69,8 +69,8 @@
 		"sqft" : "789",
 		"status" : "L",
 		"Price" : 78.99,
-		"PictureUrl" :"img/product/HT-1114.jpg",
         "lat" : 45.6421927,
-        "lng" : -73.5064827
+        "lng" : -73.5064827,
+        "streetViewUrl" : "https://maps.googleapis.com/maps/api/streetview?size=700x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=AIzaSyDu8nL9gXxnT6OgMwrq5adYefhUwc2km3w"
 	}
 ]
