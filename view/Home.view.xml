@@ -7,16 +7,18 @@
 	xmlns:h="http://www.w3.org/1999/xhtml">
 	<Page
 		id="page"
-		title="{i18n>HOME_TITLE}"
-		showFooter="{device>/isNoPhone}" >
-		<headerContent>
+        showHeader="false"
+		showFooter="{device>/isNoPhone}">
+<!--		<headerContent>-->
 <!--            cart button-->
+<!--
 			<Button
 				icon="sap-icon://email"
 				tooltip="{i18n>TO_CART_BUTTON_TOOLTIP}"
 				press="handleCartButtonPress">
 			</Button>
-		</headerContent>
+-->
+<!--		</headerContent>-->
 		<subHeader>
 			<Toolbar id="searchBar">
 				<SearchField
@@ -29,23 +31,6 @@
 				</SearchField>
 			</Toolbar>
 		</subHeader>
-        <footer>
-			<Toolbar>
-                <Button text="testMe" press="setWelcomeSectionListTitle" />
-				<ToolbarSpacer/>
-                 <!-- language menu-->
-                <MenuButton id="languageMenuButton" text="" icon="sap-icon://world">
-                <menu>
-                    <Menu itemSelected="onLanguageMenuAction">
-                        <items>
-                            <MenuItem text="EN" />
-                            <MenuItem text="FR" />
-                        </items>
-                    </Menu>
-                </menu>
-            </MenuButton>
-			</Toolbar>
-		</footer>
 		<content>
 			<PullToRefresh
 				id="pullToRefresh"

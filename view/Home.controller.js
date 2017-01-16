@@ -18,9 +18,7 @@ sap.ui.define([
 
 		onInit: function () {
             var oController = this;
-            oController.bello = "12";
             //set text for languageMenuButton
-            this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
 			var oComponent = this.getOwnerComponent();
 			this._router = oComponent.getRouter();
 			// trigger first search to set visibilities right
@@ -134,22 +132,6 @@ sap.ui.define([
 		handleCartButtonPress: function () {
 			this._router.navTo("cart");
 		},
-        
-        onLanguageMenuAction: function(oEvent) {
-            //get selected language and pass param
-            var oItem = oEvent.getParameter("item");
-            if(oItem instanceof sap.m.MenuItem){
-                sap.ui.getCore().getConfiguration().setLanguage(oItem.getText());
-                this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
-                // show message toast
-                var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
-                MessageToast.show(oBundle.getText("LANGUAGE_CHANGED"));
-                //eventBus used as a test
-                var oBus = sap.ui.getCore().getEventBus();
-                oBus.publish("home", "updateSection");
-            }
-            
-        },
         
         //draft
         setWelcomeSectionListTitle : function(){

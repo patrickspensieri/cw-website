@@ -21,9 +21,15 @@ footer{
     background-color: default;
 }
 
+
+
 /*GLOBAL*/
 /*add shadow to right of master detail (Home.view.xml)*/
 .sapMNav{
+}
+/*set page header to white*/
+.sapMIBar.sapMHeader-CTX{
+    background-color: white;
 }
 /*remove border atop footers*/
 .sapContrast.sapMIBar-CTX.sapMFooter-CTX, .sapContrast .sapMIBar-CTX.sapMFooter-CTX {

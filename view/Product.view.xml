@@ -1,64 +1,116 @@
 <!--Detail page for the selected property.-->
 <mvc:View
 	controllerName="ui.view.Product"
-	xmlns="sap.m"
+    xmlns="sap.uxap"
+	xmlns:m="sap.m"
 	xmlns:core="sap.ui.core"
     xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:control="control"
 	xmlns:h="http://www.w3.org/1999/xhtml"
     xmlns:gmaps="openui5.googlemaps">
-	<Page
+	<m:Page
 		id="page"
 		showNavButton="{device>/isPhone}"
 		navButtonPress="handleNavButtonPress" 
-        showHeader="false">
-		<footer>
-			<Toolbar>
-				<ToolbarSpacer/>
-				<Button
+        showHeader="true"
+        showFooter="false">
+        <m:headerContent>
+			<m:Toolbar>
+                <m:ToolbarSpacer/>
+                 <!-- language menu-->
+                <m:MenuButton id="languageMenuButton" text="" icon="sap-icon://world">
+                <m:menu>
+                    <m:Menu itemSelected="onLanguageMenuAction">
+                        <m:items>
+                            <m:MenuItem text="EN" />
+                            <m:MenuItem text="FR" />
+                        </m:items>
+                    </m:Menu>
+                </m:menu>
+            </m:MenuButton>
+			</m:Toolbar>
+		</m:headerContent>
+		<m:footer>
+			<m:Toolbar>
+				<m:ToolbarSpacer/>
+				<m:Button
 					icon="sap-icon://add"
 					text="{i18n>PRODUCT_ADD_BUTTON_TEXT}"
 					tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}"
 					press="handleAddButtonPress" />
-			</Toolbar>
-		</footer>
-		<content>
-			<ObjectHeader
-				title="{Name}"
-				number="{
-					path : 'Price',
-					formatter : '.formatter.price'
-				}"
-				numberUnit="CAD">
-				<attributes>
-					<ObjectAttribute
-						text="{City}" />
-					<ObjectAttribute
-						text="{sqft}sq ft" />
-				</attributes>
-				<firstStatus>
-					<ObjectStatus
-						text="{
-							path : 'status',
-							formatter : '.formatter.statusText'
-						}"
-						state="{
-							path : 'status',
-							formatter : '.formatter.statusState'
-						}" />
-				</firstStatus>
-			</ObjectHeader>
-            <l:Grid defaultSpan="L6 M12 S12">
-                <l:content>
-                    <gmaps:Map lat="{lat}" lng="{lng}" height="400px" width="700px" zoom="18" class="materialCardNoHover">
-                        <gmaps:markers>
-                            <gmaps:Marker lat="{lat}" lng="{lng}" info="Bondi Beach" />
-                        </gmaps:markers>
-                    </gmaps:Map>
-                    <Image src="{streetViewUrl}" class="materialCardNoHover"></Image> 
-                </l:content>
-            </l:Grid>
-		</content>
-	</Page>
+			</m:Toolbar>
+		</m:footer>
+		<m:content>
+            <ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
+                <headerTitle>
+                    <ObjectPageHeader objectTitle="{Name}">
+                        <actions>
+                            <ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="More Info" importance="High" hideText="false"/>
+                        </actions>
+                    </ObjectPageHeader>
+                </headerTitle>
+
+                <headerContent>
+                    <m:ObjectAttribute title="" text="{City}"/>
+                </headerContent>
+                <sections>
+                    <!-- Location -->
+                    <ObjectPageSection title="Location">
+                        <subSections>
+                            <ObjectPageSubSection title="">
+                                <blocks>
+                                    <l:Grid defaultSpan="L6 M12 S12">
+                                        <l:content>
+                                            <gmaps:Map lat="{lat}" lng="{lng}" height="400px" width="700px" zoom="18" class="materialCardNoHover">
+                                                <gmaps:markers>
+                                                    <gmaps:Marker lat="{lat}" lng="{lng}" info="Bondi Beach" />
+                                                </gmaps:markers>
+                                            </gmaps:Map>
+                                            <m:Image src="{streetViewUrl}" class="materialCardNoHover"></m:Image> 
+                                        </l:content>
+                                    </l:Grid>
+                                </blocks>
+                            </ObjectPageSubSection>
+                        </subSections>
+                    </ObjectPageSection>
+                    
+                    <!-- About -->
+                    <ObjectPageSection title="About">
+                        <subSections>
+                            <ObjectPageSubSection title="">
+                                <blocks>
+                                    <m:ObjectHeader
+                                        title="{Name}"
+                                        number="{
+                                            path : 'Price',
+                                            formatter : '.formatter.price'
+                                        }"
+                                        numberUnit="CAD">
+                                        <m:attributes>
+                                            <m:ObjectAttribute
+                                                text="{City}" />
+                                            <m:ObjectAttribute
+                                                text="{sqft}sq ft" />
+                                        </m:attributes>
+                                        <m:firstStatus>
+                                            <m:ObjectStatus
+                                                text="{
+                                                    path : 'status',
+                                                    formatter : '.formatter.statusText'
+                                                }"
+                                                state="{
+                                                    path : 'status',
+                                                    formatter : '.formatter.statusState'
+                                                }" />
+                                        </m:firstStatus>
+                                    </m:ObjectHeader>
+                                </blocks>
+                            </ObjectPageSubSection>
+                        </subSections>
+                    </ObjectPageSection>
+                </sections>
+            </ObjectPageLayout>
+		</m:content>
+	</m:Page>
 </mvc:View>

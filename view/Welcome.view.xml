@@ -6,103 +6,124 @@
           xmlns:core="sap.ui.core"
           xmlns:l="sap.ui.layout"
 		   height="100%">
-	<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
-		<headerTitle>
-			<ObjectPageHeader objectTitle="CW Website">
-                <actions>
-					<ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="More Info" importance="High" hideText="false"/>
+    <m:Page
+		id="page"
+		showNavButton="{device>/isPhone}"
+		navButtonPress="handleNavButtonPress" 
+        showHeader="true"
+        showFooter="false">
+		<m:headerContent>
+			<m:Toolbar>
+                <m:ToolbarSpacer/>
+                 <!-- language menu-->
+                <m:MenuButton id="languageMenuButton" text="" icon="sap-icon://world">
+                <m:menu>
+                    <m:Menu itemSelected="onLanguageMenuAction">
+                        <m:items>
+                            <m:MenuItem text="EN" />
+                            <m:MenuItem text="FR" />
+                        </m:items>
+                    </m:Menu>
+                </m:menu>
+            </m:MenuButton>
+			</m:Toolbar>
+		</m:headerContent>
+		<m:content>
+            <ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
+                <headerTitle>
+                    <ObjectPageHeader objectTitle="CW Website">
+                    </ObjectPageHeader>
+                </headerTitle>
 
-				</actions>
-			</ObjectPageHeader>
-		</headerTitle>
- 
-		<headerContent>
-			<m:ObjectAttribute title="" text="A money mission statement"/>
-		</headerContent>
- 
-		<sections>
-            <!-- About -->
-			<ObjectPageSection title="About">
-				<subSections>
-					<ObjectPageSubSection title="">
-						<blocks>
-							<m:Button text="testBtn"/>
-						</blocks>
-					</ObjectPageSubSection>
-				</subSections>
-			</ObjectPageSection>
-            
-            <!-- Our Services -->
-			<ObjectPageSection title="Our Services">
-                <subSections>
-					<ObjectPageSubSection title="Industrial">
-						<blocks>
-							<m:Button text="testBtn"/>
-						</blocks>
-					</ObjectPageSubSection>
-                    <ObjectPageSubSection title="Office">
-						<blocks>
-							<m:Button text="testBtn"/>
-						</blocks>
-					</ObjectPageSubSection>
-                    <ObjectPageSubSection title="Residential">
-						<blocks>
-							<m:Button text="testBtn"/>
-						</blocks>
-					</ObjectPageSubSection>
-				</subSections>
-			</ObjectPageSection>
-            
-            <!-- Contact Us -->
-			<ObjectPageSection title="Contact Us">
-				<subSections>
-					<ObjectPageSubSection title="" id="contactUsSection">
-						<blocks>
-<!--                            <core:Fragment fragmentName="ui.view.fragment.ContactUs" type="XML" />-->
-                            <l:Grid defaultSpan="L6 M12 S12">
-                                <l:content>
-<!--                                      Marco Romano-->
-                                    <m:List class="materialCardNoHover"
-                                        headerText="Marco Romano">
-                                        <m:DisplayListItem
-                                            label="Phone"
-                                            value="514-123-4567"
-                                            type="Navigation"
-                                            press="handleTelPress"/>
-                                        <m:DisplayListItem
-                                            label="Email"
-                                            value="marco.romano@test.ca"
-                                            type="Navigation"
-                                            press="handleEmailPress"/>
-                                        <m:DisplayListItem
-                                            label="Address"
-                                            value="999 de Maisonneuve Blvd W. bureau 1500 Montreal, QC H3A 3L4"
-                                            type="Action" />
-                                    </m:List>
-                                    <!--  Joe Rullier-->
-                                    <m:List class="materialCardNoHover"
-                                        headerText="Joe Rullier">
-                                        <m:DisplayListItem
-                                            label="Phone"
-                                            value="514-123-4567"
-                                            type="Navigation"
-                                            press="handleTelPress"/>
-                                        <m:DisplayListItem
-                                            label="Email"
-                                            value="joe.rullier@test.ca"
-                                            type="Navigation"
-                                            press="handleEmailPress"/>
-                                        <m:DisplayListItem
-                                            label="Address"
-                                            value="999 de Maisonneuve Blvd W. bureau 1500 Montreal, QC H3A 3L4"
-                                            type="Action" />
-                                    </m:List>
-                                </l:content>
-                            </l:Grid>
-						</blocks>
-					</ObjectPageSubSection>
-				</subSections>
-			</ObjectPageSection>
-		</sections>
-	</ObjectPageLayout>
+                <headerContent>
+                    <m:ObjectAttribute title="" text="A money mission statement"/>
+                </headerContent>
+                
+                <sections>
+                    <!-- About -->
+                    <ObjectPageSection title="About">
+                        <subSections>
+                            <ObjectPageSubSection title="">
+                                <blocks>
+                                    <m:Button text="testBtn"/>
+                                </blocks>
+                            </ObjectPageSubSection>
+                        </subSections>
+                    </ObjectPageSection>
+
+                    <!-- Our Services -->
+                    <ObjectPageSection title="Our Services">
+                        <subSections>
+                            <ObjectPageSubSection title="Industrial">
+                                <blocks>
+                                    <m:Button text="testBtn"/>
+                                </blocks>
+                            </ObjectPageSubSection>
+                            <ObjectPageSubSection title="Office">
+                                <blocks>
+                                    <m:Button text="testBtn"/>
+                                </blocks>
+                            </ObjectPageSubSection>
+                            <ObjectPageSubSection title="Residential">
+                                <blocks>
+                                    <m:Button text="testBtn"/>
+                                </blocks>
+                            </ObjectPageSubSection>
+                        </subSections>
+                    </ObjectPageSection>
+
+                    <!-- Contact Us -->
+                    <ObjectPageSection title="Contact Us">
+                        <subSections>
+                            <ObjectPageSubSection title="" id="contactUsSection">
+                                <blocks>
+        <!--                            <core:Fragment fragmentName="ui.view.fragment.ContactUs" type="XML" />-->
+                                    <l:Grid defaultSpan="L6 M12 S12">
+                                        <l:content>
+        <!--                                      Marco Romano-->
+                                            <m:List class="materialCardNoHover"
+                                                headerText="Marco Romano">
+                                                <m:DisplayListItem
+                                                    label="Phone"
+                                                    value="514-123-4567"
+                                                    type="Navigation"
+                                                    press="handleTelPress"/>
+                                                <m:DisplayListItem
+                                                    label="Email"
+                                                    value="marco.romano@test.ca"
+                                                    type="Navigation"
+                                                    press="handleEmailPress"/>
+                                                <m:DisplayListItem
+                                                    label="Address"
+                                                    value="999 de Maisonneuve Blvd W. bureau 1500 Montreal, QC H3A 3L4"
+                                                    type="Action" />
+                                            </m:List>
+                                            <!--  Joe Rullier-->
+                                            <m:List class="materialCardNoHover"
+                                                headerText="Joe Rullier">
+                                                <m:DisplayListItem
+                                                    label="Phone"
+                                                    value="514-123-4567"
+                                                    type="Navigation"
+                                                    press="handleTelPress"/>
+                                                <m:DisplayListItem
+                                                    label="Email"
+                                                    value="joe.rullier@test.ca"
+                                                    type="Navigation"
+                                                    press="handleEmailPress"/>
+                                                <m:DisplayListItem
+                                                    label="Address"
+                                                    value="999 de Maisonneuve Blvd W. bureau 1500 Montreal, QC H3A 3L4"
+                                                    type="Action" />
+                                            </m:List>
+                                        </l:content>
+                                    </l:Grid>
+                                </blocks>
+                            </ObjectPageSubSection>
+                        </subSections>
+                    </ObjectPageSection>
+                </sections>
+            </ObjectPageLayout>
+        </m:content>
+    </m:Page>
 </mvc:View>

@@ -1,6 +1,17 @@
-sap.ui.controller("ui.view.Welcome", {
+sap.ui.define([
+	'sap/ui/core/mvc/Controller',
+	'ui/model/formatter',
+	'sap/m/MessageToast',
+	'sap/m/MessageBox'
+], function (Controller, formatter, MessageToast, MessageBox) {
+	return Controller.extend("ui.view.Welcome", {
+		formatter : formatter,
+
+//sap.ui.controller("ui.view.Welcome", {
 
 	onInit: function () {
+        //set correct language
+        this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
 //        this.getContactUsFragment().placeAt("contactUsSection");
 	},
 
@@ -31,6 +42,21 @@ sap.ui.controller("ui.view.Welcome", {
     handleUrlPress: function (evt) {
         sap.m.URLHelper.redirect(this._getVal(evt), true);
     },
+        
+    onLanguageMenuAction: function(oEvent) {
+        //get selected language and pass param
+        var oItem = oEvent.getParameter("item");
+        if(oItem instanceof sap.m.MenuItem){
+            sap.ui.getCore().getConfiguration().setLanguage(oItem.getText());
+            this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
+            // show message toast
+            var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+            MessageToast.show(oBundle.getText("LANGUAGE_CHANGED"));
+            //eventBus used as a test
+            var oBus = sap.ui.getCore().getEventBus();
+            oBus.publish("home", "updateSection");
+        }
+     }
     
 //    getContactUsFragment: function() {
 //        var oView = this.getView();
@@ -44,4 +70,5 @@ sap.ui.controller("ui.view.Welcome", {
 //         }
 //        return oFragment;
 //    }
+    });
 });
