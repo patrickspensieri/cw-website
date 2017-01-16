@@ -17,12 +17,24 @@ sap.ui.define([
 		formatter : formatter,
 
 		onInit: function () {
+            var oController = this;
+            oController.bello = "12";
             //set text for languageMenuButton
             this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
 			var oComponent = this.getOwnerComponent();
 			this._router = oComponent.getRouter();
 			// trigger first search to set visibilities right
 			this._search();
+            //set the proper titles from i18n once list is rendered
+            var list = this.getView().byId("welcomePageSectionList");
+            list.onAfterRendering = function(){
+                oController.setWelcomeSectionListTitle();
+ 		     };
+            //subscribe to event bus, reset the text once language is changed
+            // register for events
+			var oBus = sap.ui.getCore().getEventBus();
+			oBus.subscribe("home", "updateSection", this.setWelcomeSectionListTitle, this);
+
 		},
 
 		handleSearch: function () {
@@ -132,8 +144,24 @@ sap.ui.define([
                 // show message toast
                 var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
                 MessageToast.show(oBundle.getText("LANGUAGE_CHANGED"));
+                //eventBus used as a test
+                var oBus = sap.ui.getCore().getEventBus();
+                oBus.publish("home", "updateSection");
             }
+            
         },
+        
+        //draft
+        setWelcomeSectionListTitle : function(){
+            var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+            var list = this.getView().byId("welcomePageSectionList");
+            var str = "";
+            jQuery.each(list.getItems(), function(i, item) {
+                console.log("itemTitle : " + str);
+                str = item.getTitle();
+                item.setTitle(oBundle.getText(str));           
+            });
+        }
 
 	});
 });

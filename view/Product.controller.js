@@ -19,6 +19,7 @@ sap.ui.define([
 			oBus.subscribe("shoppingCart", "updateProduct", this.fnUpdateProduct, this);
 		},
 
+        //herehereherehere
 		_routePatternMatched: function(oEvent) {
 			var sId = oEvent.getParameter("arguments").productId,
 				oView = this.getView(),

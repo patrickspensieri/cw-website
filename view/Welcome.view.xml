@@ -9,6 +9,10 @@
 	<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
 		<headerTitle>
 			<ObjectPageHeader objectTitle="CW Website">
+                <actions>
+					<ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="More Info" importance="High" hideText="false"/>
+
+				</actions>
 			</ObjectPageHeader>
 		</headerTitle>
  

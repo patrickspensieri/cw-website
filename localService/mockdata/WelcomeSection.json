@@ -1,13 +1,13 @@
 [
 	{
-		"Section" : "About",
+		"Section" : "WELCOME_SECTION_ABOUT",
         "Icon" : "sap-icon://hint"
 	}, {
 
-		"Section" : "Our Services",
+		"Section" : "WELCOME_SECTION_OUR_SERVICES",
         "Icon" : "sap-icon://wrench"
 	}, {
-		"Section" : "Contact Us",
+		"Section" : "WELCOME_SECTION_CONTACT_US",
         "Icon" : "sap-icon://call"
 	}
 ]

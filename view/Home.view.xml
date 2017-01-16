@@ -31,6 +31,7 @@
 		</subHeader>
         <footer>
 			<Toolbar>
+                <Button text="testMe" press="setWelcomeSectionListTitle" />
 				<ToolbarSpacer/>
                  <!-- language menu-->
                 <MenuButton id="languageMenuButton" text="" icon="sap-icon://world">
@@ -57,17 +58,18 @@
 				mode="None"
 				items="{
 					path : '/WelcomePageSections'
-				}">
+				}"
+                onAfterRendering="bindWelcomePageSectionList">
 				<items>
 					<StandardListItem
-						title="{Section}"
-                        icon="{Icon}"
+                        title="{Section}"
+                        icon="{Icon}" 
 						type="Navigation"
 						press="handleWelcomeListItemPress" >
 					</StandardListItem>
 				</items>
 			</List>
-            <!-- product search results -->
+            <!-- property search results -->
 			<List
 				id="productList"
 				mode="{device>/listMode}"
