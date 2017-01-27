@@ -109,6 +109,29 @@
                             </ObjectPageSubSection>
                         </subSections>
                     </ObjectPageSection>
+                    
+                     <!-- Details -->
+                    <ObjectPageSection title="Details">
+                        <subSections>
+                            <ObjectPageSubSection title="">
+                                <blocks>
+                                   <m:List
+                                        mode="{device>/listMode}"
+                                        noDataText="{i18n>HOME_NO_DATA}"
+                                        items="{
+                                            path : 'details'
+                                        }">
+                                        <m:items>
+                                            <m:StandardListItem
+                                                title="{/details/label}"
+                                                info="{/details/value}">
+                                            </m:StandardListItem>
+                                        </m:items>
+                                    </m:List>
+                                </blocks>
+                            </ObjectPageSubSection>
+                        </subSections>
+                    </ObjectPageSection>
                 </sections>
             </ObjectPageLayout>
 		</m:content>

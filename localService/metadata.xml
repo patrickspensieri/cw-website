@@ -70,6 +70,19 @@
 					MaxLength="255" sap:label="Product Image URL" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false" />
 			</EntityType>
+            
+            <EntityType Name="details" sap:content-version="1"
+				xmlns:sap="http://www.sap.com/Protocols/SAPData">
+				<Key>
+					<PropertyRef Name="Deets" />
+				</Key>
+				<Property Name="key" Type="Edm.String" Nullable="false"
+					MaxLength="40" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" />
+				<Property Name="val" Type="Edm.String" Nullable="false"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"
+					sap:filterable="false" />
+			</EntityType>
 
 			<EntityType Name="ProductCategory" sap:content-version="1"
 				xmlns:sap="http://www.sap.com/Protocols/SAPData">
