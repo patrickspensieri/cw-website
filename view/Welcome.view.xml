@@ -78,10 +78,10 @@
                             <ObjectPageSubSection title="" id="contactUsSection">
                                 <blocks>
         <!--                            <core:Fragment fragmentName="ui.view.fragment.ContactUs" type="XML" />-->
-                                    <l:Grid defaultSpan="L6 M12 S12">
+                                    <l:Grid defaultSpan="L12 M12 S12">
                                         <l:content>
         <!--                                      Marco Romano-->
-                                            <m:List class="materialCardNoHover"
+                                            <m:List
                                                 headerText="Marco Romano">
                                                 <m:DisplayListItem
                                                     label="Phone"
@@ -99,7 +99,7 @@
                                                     type="Action" />
                                             </m:List>
                                             <!--  Joe Rullier-->
-                                            <m:List class="materialCardNoHover"
+                                            <m:List
                                                 headerText="Joe Rullier">
                                                 <m:DisplayListItem
                                                     label="Phone"

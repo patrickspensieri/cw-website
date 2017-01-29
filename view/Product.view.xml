@@ -115,13 +115,20 @@
                         <subSections>
                             <ObjectPageSubSection title="">
                                 <blocks>
-                                   <m:List>
+                                   <m:List id="detailsList">
                                         <m:DisplayListItem
                                             label="Type"
                                             value="{type}"/>
                                         <m:DisplayListItem
                                             label="Available Space"
                                             value="{sqft}"/>
+                                       <m:DisplayListItem
+                                            label="Floors"
+                                            value="{floors}"
+                                            visible="{
+                                                     path : 'floors',
+                                                     formatter : '.formatter.visible'
+                                                     }"/>
                                     </m:List>
                                 </blocks>
                             </ObjectPageSubSection>
