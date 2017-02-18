@@ -1,0 +1,14 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+    <Dialog title="Example" contentWidth="90%" contentHeight="90%" 
+            horizontalScrolling="false" verticalScrolling="false" class="iframeHolder"
+            id="pdfDialog">
+        <html:iframe src="http://mozilla.github.io/pdf.js/web/viewer.html" height="100%" width="100%"/>
+        <buttons>
+            <Button text="{i18n>Button.ok}" press="closeDialog"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

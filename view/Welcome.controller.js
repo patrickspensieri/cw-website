@@ -13,7 +13,25 @@ sap.ui.define([
         //set correct language
         this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
 //        this.getContactUsFragment().placeAt("contactUsSection");
+        //subscribe to eventbus for auto scrolling to selected section
+//        var oBus = sap.ui.getCore().getEventBus();
+//		oBus.subscribe("welcome", "scrollToSection", this.scrollToSection, this);
+        
+//         //navigate to a specific subsection on open
+//        this.oObjectPageLayout = this.getView().byId("WelcomeObjectPageLayout");
+//        this.oTargetSubSection = this.getView().byId("id");
+//        this.oObjectPageLayout.addEventDelegate({
+//        onAfterRendering: jQuery.proxy(function () {
+//            //need to wait for the scrollEnablement to be active
+//            jQuery.sap.delayedCall(500, this.oObjectPageLayout, this.oObjectPageLayout.scrollToSection, [this.oTargetSubSection.getId()]);
+//            }, this)
+//        });
+        
 	},
+        
+//    scrollToSection : function (sChannel, sEvent, oData){
+//        this.getView().byId("WelcomeObjectPageLayout").scrollToSection(oData.id);
+//    },
 
 	onExit: function () {
 		clearTimeout(this._iDelay);

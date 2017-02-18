@@ -17,6 +17,8 @@ sap.ui.define([
 			// register for events
 			var oBus = sap.ui.getCore().getEventBus();
 			oBus.subscribe("shoppingCart", "updateProduct", this.fnUpdateProduct, this);
+            //set correct language
+            this.getView().byId("languageMenuButton").setText(sap.ui.getCore().getConfiguration().getLanguage());
 		},
 
         //herehereherehere
@@ -177,6 +179,18 @@ sap.ui.define([
                 var oBus = sap.ui.getCore().getEventBus();
                 oBus.publish("home", "updateSection");
             }
-         }
+         },
+      
+        onOpenPDFDialog : function () {
+             var oView = this.getView();
+             var oDialog = oView.byId("pdfDialog");
+             // create dialog lazily
+             if (!oDialog) {
+                // create dialog via fragment factory
+                oDialog = sap.ui.xmlfragment(oView.getId(), "ui.view.fragment.PDF");
+                oView.addDependent(oDialog);
+             }
+         oDialog.open();
+      }
 	});
 });

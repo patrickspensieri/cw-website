@@ -90,6 +90,13 @@ sap.ui.define([
         handleWelcomeListItemPress: function(oEvent){
 //            this._router.navTo("welcome"); 
             this._router.getTargets().display("welcomeView");
+            //get the selected section
+            var oBindContext = oEvent.getSource().getBindingContext();
+			var oModel = oBindContext.getModel();
+			var sSectionId = oModel.getData(oBindContext.getPath()).Section;
+            //pass sSectionId to welcome page for automatic scrolling
+//            var oBus = sap.ui.getCore().getEventBus();
+//            oBus.publish("welcome", "scrollToSection", {"id" : sSectionId});
 
         },
         

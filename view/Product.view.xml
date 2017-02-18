@@ -46,7 +46,8 @@
                 <headerTitle>
                     <ObjectPageHeader objectTitle="{Name}">
                         <actions>
-                            <ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="More Info" importance="High" hideText="false"/>
+                            <ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="More Info" importance="High" hideText="false"
+                            press="onOpenPDFDialog"/>
                         </actions>
                     </ObjectPageHeader>
                 </headerTitle>

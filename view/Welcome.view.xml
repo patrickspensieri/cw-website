@@ -29,7 +29,7 @@
 			</m:Toolbar>
 		</m:headerContent>
 		<m:content>
-            <ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
+            <ObjectPageLayout id="WelcomeObjectPageLayout" enableLazyLoading="false">
                 <headerTitle>
                     <ObjectPageHeader objectTitle="CW Website">
                     </ObjectPageHeader>
@@ -41,7 +41,7 @@
                 
                 <sections>
                     <!-- About -->
-                    <ObjectPageSection title="About">
+                    <ObjectPageSection title="About" id="WELCOME_SECTION_ABOUT">
                         <subSections>
                             <ObjectPageSubSection title="">
                                 <blocks>
@@ -52,7 +52,7 @@
                     </ObjectPageSection>
 
                     <!-- Our Services -->
-                    <ObjectPageSection title="Our Services">
+                    <ObjectPageSection title="Our Services" id="WELCOME_SECTION_OUR_SERVICES">
                         <subSections>
                             <ObjectPageSubSection title="Industrial">
                                 <blocks>
@@ -73,7 +73,7 @@
                     </ObjectPageSection>
 
                     <!-- Contact Us -->
-                    <ObjectPageSection title="Contact Us">
+                    <ObjectPageSection title="Contact Us" id="WELCOME_SECTION_CONTACT_US">
                         <subSections>
                             <ObjectPageSubSection title="" id="contactUsSection">
                                 <blocks>
