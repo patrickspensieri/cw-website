@@ -46,7 +46,8 @@
                 <headerTitle>
                     <ObjectPageHeader objectTitle="{Name}">
                         <actions>
-                            <ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="More Info" importance="High" hideText="false"/>
+                            <ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="More Info" importance="High" hideText="false"
+                            press="onOpenPDFDialog"/>
                         </actions>
                     </ObjectPageHeader>
                 </headerTitle>
@@ -62,12 +63,12 @@
                                 <blocks>
                                     <l:Grid defaultSpan="L6 M12 S12">
                                         <l:content>
-                                            <gmaps:Map lat="{lat}" lng="{lng}" height="400px" width="700px" zoom="18" class="materialCardNoHover">
+                                            <gmaps:Map lat="{lat}" lng="{lng}" height="400px" width="700px" zoom="18">
                                                 <gmaps:markers>
-                                                    <gmaps:Marker lat="{lat}" lng="{lng}" info="Bondi Beach" />
+                                                    <gmaps:Marker lat="{lat}" lng="{lng}" info="info" />
                                                 </gmaps:markers>
                                             </gmaps:Map>
-                                            <m:Image src="{streetViewUrl}" class="materialCardNoHover"></m:Image> 
+                                            <m:Image src="{streetViewUrl}"></m:Image> 
                                         </l:content>
                                     </l:Grid>
                                 </blocks>
@@ -115,18 +116,20 @@
                         <subSections>
                             <ObjectPageSubSection title="">
                                 <blocks>
-                                   <m:List
-                                        mode="{device>/listMode}"
-                                        noDataText="{i18n>HOME_NO_DATA}"
-                                        items="{
-                                            path : 'details'
-                                        }">
-                                        <m:items>
-                                            <m:StandardListItem
-                                                title="{/details/label}"
-                                                info="{/details/value}">
-                                            </m:StandardListItem>
-                                        </m:items>
+                                   <m:List id="detailsList">
+                                        <m:DisplayListItem
+                                            label="Type"
+                                            value="{type}"/>
+                                        <m:DisplayListItem
+                                            label="Available Space"
+                                            value="{sqft}"/>
+                                       <m:DisplayListItem
+                                            label="Floors"
+                                            value="{floors}"
+                                            visible="{
+                                                     path : 'floors',
+                                                     formatter : '.formatter.visible'
+                                                     }"/>
                                     </m:List>
                                 </blocks>
                             </ObjectPageSubSection>

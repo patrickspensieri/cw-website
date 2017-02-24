@@ -41,7 +41,11 @@
 
 		streetViewUrl: function (sUrl) {
 			return jQuery.sap.getResourcePath("ui/" + sUrl);
-		}
+		},
+        
+        visible: function(value){
+            return (value != null);
+        }
 	};
 
 	return formatter;
