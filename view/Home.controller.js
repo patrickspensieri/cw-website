@@ -69,11 +69,14 @@ sap.ui.define([
 			}
 
 			// filter product list
+            // according to API, FilterOperator.Contains is not case sensitive, this is not the case
 			var oBinding = oProductList.getBinding("items");
 			if (oBinding) {
 				if (bShowSearch) {
-					var oFilter = new Filter("Name", FilterOperator.Contains, oSearchField.getValue());
-					oBinding.filter([oFilter]);
+                    var oNameFilter = new Filter("Name", FilterOperator.Contains, oSearchField.getValue());
+                    var oCityFilter = new Filter("City", FilterOperator.Contains, oSearchField.getValue());
+                    var oFilter = new Filter([oNameFilter, oCityFilter]);
+                    oBinding.filter(oFilter);
 				} else {
 					oBinding.filter([]);
 				}
