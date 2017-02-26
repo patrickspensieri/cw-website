@@ -37,16 +37,16 @@
             <Toolbar class="customFooter">
 				<l:HorizontalLayout>
                     <Button
-                        icon="/img/socialmedia/facebook.svg"
+                        icon="img/socialmedia/facebook.svg"
                         tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}" />
                     <Button
-                        icon="/img/socialmedia/instagram.svg"
+                        icon="img/socialmedia/instagram.svg"
                         tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}" />
                     <Button
-                        icon="/img/socialmedia/twitter.svg"
+                        icon="img/socialmedia/twitter.svg"
                         tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}"/>
                     <Button
-                        icon="/img/socialmedia/linkedin.svg"
+                        icon="img/socialmedia/linkedin.svg"
                         tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}"/>
                     <ToolbarSpacer/>
                 </l:HorizontalLayout>
