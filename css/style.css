@@ -16,11 +16,16 @@
 .invisible {
 	display: none;
 }
-/*change color of footer*/
-footer{
-    background-color: default;
+/*footer ... doesn't work?*/
+.customFooter{
+    background: white !important;
 }
 
+/*black text*/
+.black{
+    color: black !important;
+    text-shadow: none !important;
+}
 
 
 /*GLOBAL*/
