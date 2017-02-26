@@ -181,16 +181,21 @@ sap.ui.define([
             }
          },
       
-        onOpenPDFDialog : function () {
-             var oView = this.getView();
-             var oDialog = oView.byId("pdfDialog");
-             // create dialog lazily
-             if (!oDialog) {
-                // create dialog via fragment factory
-                oDialog = sap.ui.xmlfragment(oView.getId(), "ui.view.fragment.PDF");
-                oView.addDependent(oDialog);
-             }
-         oDialog.open();
+        onOpenPDF : function () {
+//             var oView = this.getView();
+//             var oDialog = oView.byId("pdfDialog");
+//             // create dialog lazily
+//             if (!oDialog) {
+//                // create dialog via fragment factory
+//                oDialog = sap.ui.xmlfragment(oView.getId(), "ui.view.fragment.PDF");
+//                oView.addDependent(oDialog);
+//             }
+//         oDialog.open();
+            var oProduct = this.getView().getBindingContext().getObject();
+			var sPdf = oProduct.pdf;
+            if(sPdf){
+                 window.open(sPdf);
+            }
       }
 	});
 });

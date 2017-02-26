@@ -4,11 +4,13 @@
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
     xmlns:tnt="sap.tnt"
+    xmlns:l="sap.ui.layout"
 	xmlns:h="http://www.w3.org/1999/xhtml">
 	<Page
 		id="page"
         showHeader="false"
-		showFooter="{device>/isNoPhone}">
+        showFooter="true">
+<!--        		showFooter="{device>/isNoPhone}"-->
 <!--		<headerContent>-->
 <!--            cart button-->
 <!--
@@ -31,6 +33,25 @@
 				</SearchField>
 			</Toolbar>
 		</subHeader>
+        <footer>
+            <Toolbar class="customFooter">
+				<l:HorizontalLayout>
+                    <Button
+                        icon="/img/socialmedia/facebook.svg"
+                        tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}" />
+                    <Button
+                        icon="/img/socialmedia/instagram.svg"
+                        tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}" />
+                    <Button
+                        icon="/img/socialmedia/twitter.svg"
+                        tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}"/>
+                    <Button
+                        icon="/img/socialmedia/linkedin.svg"
+                        tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}"/>
+                    <ToolbarSpacer/>
+                </l:HorizontalLayout>
+			</Toolbar>
+		</footer>
 		<content>
 			<PullToRefresh
 				id="pullToRefresh"

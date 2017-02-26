@@ -31,29 +31,22 @@
             </m:MenuButton>
 			</m:Toolbar>
 		</m:headerContent>
-		<m:footer>
-			<m:Toolbar>
-				<m:ToolbarSpacer/>
-				<m:Button
-					icon="sap-icon://add"
-					text="{i18n>PRODUCT_ADD_BUTTON_TEXT}"
-					tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}"
-					press="handleAddButtonPress" />
-			</m:Toolbar>
-		</m:footer>
 		<m:content>
             <ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
                 <headerTitle>
-                    <ObjectPageHeader objectTitle="{Name}">
+                    <ObjectPageHeader objectTitle="{Name}"
+                                      objectSubtitle="{City}">
                         <actions>
                             <ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="More Info" importance="High" hideText="false"
-                            press="onOpenPDFDialog"/>
+                            press="onOpenPDF"
+                            visible="{= ${pdf}? true : false }"/>
                         </actions>
                     </ObjectPageHeader>
                 </headerTitle>
 
                 <headerContent>
-                    <m:ObjectAttribute title="" text="{City}"/>
+                    <m:ObjectAttribute title="" text="{type}"/>
+                    <m:ObjectAttribute title="" text="{sqft}sq ft"/>
                 </headerContent>
                 <sections>
                     <!-- Location -->
@@ -137,6 +130,6 @@
                     </ObjectPageSection>
                 </sections>
             </ObjectPageLayout>
-		</m:content>
-	</m:Page>
+        </m:content>
+    </m:Page>
 </mvc:View>

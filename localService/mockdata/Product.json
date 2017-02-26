@@ -11,7 +11,8 @@
         "lat" : 45.5348804,
         "lng" : -73.6144921,
         "streetViewUrl" : "https://maps.googleapis.com/maps/api/streetview?size=700x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=AIzaSyDu8nL9gXxnT6OgMwrq5adYefhUwc2km3w&signature=ot7dgPEdLzYXh9VfXbw8GjwO9kg=",
-        "type" : "Investment"
+        "type" : "Investment",
+        "pdf" : "pdf/test.pdf"
 	}, {
 		"PropertyId" : "id_2",
 		"Name" : "4791-4793, boul. Dagenais Ouest",
@@ -24,7 +25,8 @@
         "lat" : 45.5521592,
         "lng" : -73.8596684,
         "streetViewUrl" : "https://maps.googleapis.com/maps/api/streetview?size=700x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=AIzaSyDu8nL9gXxnT6OgMwrq5adYefhUwc2km3w&signature=ot7dgPEdLzYXh9VfXbw8GjwO9kg=",
-        "type" : "Investment"
+        "type" : "Investment",
+        "pdf" : "pdf/test.pdf"
 	}, {
 		"PropertyId" : "id_3",
 		"Name" : "152-156, avenue Mozart Est",
@@ -65,7 +67,8 @@
         "lat" : 45.462939,
         "lng" : -73.5690244,
         "streetViewUrl" : "https://maps.googleapis.com/maps/api/streetview?size=700x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=AIzaSyDu8nL9gXxnT6OgMwrq5adYefhUwc2km3w&signature=ot7dgPEdLzYXh9VfXbw8GjwO9kg=",
-        "type" : "Multi-Residential"
+        "type" : "Multi-Residential",
+        "pdf" : "pdf/test.pdf"
 	}, {
 		"PropertyId" : "id_6",
 		"Name" : "1480, boul. St-Jean Baptiste",
