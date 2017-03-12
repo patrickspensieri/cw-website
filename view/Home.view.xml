@@ -37,17 +37,21 @@
             <Toolbar class="customFooter">
 				<l:HorizontalLayout>
                     <Button
+                        id="facebook"
                         icon="img/socialmedia/facebook.svg"
-                        tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}" />
+                        press="handleSocialMediaButtonPress"/>
                     <Button
+                        id="instagram"
                         icon="img/socialmedia/instagram.svg"
-                        tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}" />
+                        press="handleSocialMediaButtonPress"/>
                     <Button
+                        id="twitter"
                         icon="img/socialmedia/twitter.svg"
-                        tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}"/>
+                        press="handleSocialMediaButtonPress"/>
                     <Button
+                        id="linkedin"
                         icon="img/socialmedia/linkedin.svg"
-                        tooltip="{i18n>PRODUCT_ADD_BUTTON_TOOLTIP}"/>
+                        press="handleSocialMediaButtonPress"/>
                     <ToolbarSpacer/>
                 </l:HorizontalLayout>
 			</Toolbar>

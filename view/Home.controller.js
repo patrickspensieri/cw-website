@@ -143,6 +143,22 @@ sap.ui.define([
 			this._router.navTo("cart");
 		},
         
+        handleSocialMediaButtonPress: function(oEvent) {
+            var id = oEvent.getSource().getId();
+            if(id.includes("facebook")){
+                window.open("https://www.facebook.com/");
+            }
+            else if(id.includes("twitter")){
+                window.open("https://www.twitter.com/");
+            }
+            else if (id.includes("linkedin")){
+                window.open("https://www.linkedin.com/")
+            }
+            else if (id.includes("instagram")){
+                window.open("https://www.instagram.com/")
+            }
+        },
+        
         //draft
         setWelcomeSectionListTitle : function(){
             var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
