@@ -98,8 +98,8 @@ sap.ui.define([
 			var oModel = oBindContext.getModel();
 			var sSectionId = oModel.getData(oBindContext.getPath()).Section;
             //pass sSectionId to welcome page for automatic scrolling
-//            var oBus = sap.ui.getCore().getEventBus();
-//            oBus.publish("welcome", "scrollToSection", {"id" : sSectionId});
+            var oBus = sap.ui.getCore().getEventBus();
+            oBus.publish("welcome", "scrollToSection", {"id" : sSectionId});
 
         },
         
@@ -149,7 +149,6 @@ sap.ui.define([
             var list = this.getView().byId("welcomePageSectionList");
             var str = "";
             jQuery.each(list.getItems(), function(i, item) {
-                console.log("itemTitle : " + str);
                 str = item.getTitle();
                 item.setTitle(oBundle.getText(str));           
             });
