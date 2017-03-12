@@ -18,7 +18,6 @@ sap.ui.define([
         
     scrollToSection: function(sChannel, sEvent, data){
         var sSectionId = data.id;
-        console.log("sectionID from welcomeController : " + sSectionId);
         this.oObjectPageLayout = this.getView().byId("WelcomeObjectPageLayout");
         this.oTargetSubSection = this.getView().byId(sSectionId);
         //make a delayed call, looks better
