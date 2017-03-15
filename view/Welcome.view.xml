@@ -31,7 +31,8 @@
 		<m:content>
             <ObjectPageLayout id="WelcomeObjectPageLayout" enableLazyLoading="false">
                 <headerTitle>
-                    <ObjectPageHeader objectTitle="CW Website">
+                    <ObjectPageHeader objectTitle="CW Website" 
+                                      isObjectTitleAlwaysVisible="true">
                     </ObjectPageHeader>
                 </headerTitle>
 

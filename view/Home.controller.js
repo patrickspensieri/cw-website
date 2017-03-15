@@ -102,18 +102,6 @@ sap.ui.define([
             oBus.publish("welcome", "scrollToSection", {"id" : sSectionId});
 
         },
-        
-        //draft
-        handleHomePageListItemPress: function(oEvent){
-            //if (not on home page)
-            //  go to home page
-            //always
-            //  scroll to selected section
-//			var oBindContext = oEvent.getSource().getBindingContext();
-//			var oModel = oBindContext.getModel();
-//			var sCategoryId = oModel.getData(oBindContext.getPath()).Category;
-//			this._router.navTo("homePage", {id: sHomePageId}); 
-        },
 
 		handleCategoryListItemPress: function (oEvent) {
 			var oBindContext = oEvent.getSource().getBindingContext();

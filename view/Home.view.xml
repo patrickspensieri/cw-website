@@ -135,7 +135,10 @@
 				}">
 				<items>
 					<StandardListItem
-						title="{CategoryName}"
+                        title="{
+                            path : 'CategoryName',
+                            formatter : '.formatter.productCategory'
+                            }"
 						type="Active"
                         icon="{Icon}"
 						counter="{NumberOfProducts}"

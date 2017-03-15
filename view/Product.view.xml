@@ -98,7 +98,10 @@
                                             value="{Name}"/>
                                        <m:DisplayListItem
                                             label="Category"
-                                            value="{Category}"/>
+                                            value="{
+                                                     path : 'Category',
+                                                     formatter : '.formatter.productCategory'
+                                                     }"/>
                                         <m:DisplayListItem
                                             label="Type"
                                             value="{type}"/>

@@ -34,6 +34,21 @@
 
 			return mStatusText[status] || status;
 		},
+        
+        productCategory: function(categoryName){
+          var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+
+			var mCategoryName = {
+				"Industrial": oBundle.getText("PROPERTY_CATEGORY_INDUSTRIAL"),
+				"Retail": oBundle.getText("PROPERTY_CATEGORY_RETAIL"),
+				"Office": oBundle.getText("PROPERTY_CATEGORY_OFFICE"),
+                "_office": oBundle.getText("PROPERTY_CATEGORY_OFFICE"),
+                "_retail": oBundle.getText("PROPERTY_CATEGORY_RETAIL"),
+                "_industrial": oBundle.getText("PROPERTY_CATEGORY_INDUSTRIAL")
+			};
+
+			return mCategoryName[categoryName] || categoryName;
+        },
 
 		statusState: function (status) {
 			return mStatusState[status] || "None";
