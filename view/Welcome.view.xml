@@ -57,17 +57,17 @@
                         <subSections>
                             <ObjectPageSubSection title="{i18n>PROPERTY_CATEGORY_INDUSTRIAL}">
                                 <blocks>
-                                    <m:Image src="/img/welcome_photos/industrial.jpg" width="100%"/>
+                                    <m:Image src="img/welcome_photos/industrial.jpg" width="100%"/>
                                 </blocks>
                             </ObjectPageSubSection>
                             <ObjectPageSubSection title="{i18n>PROPERTY_CATEGORY_OFFICE}">
                                 <blocks>
-                                    <m:Image src="/img/welcome_photos/office.jpg" width="100%"/>
+                                    <m:Image src="img/welcome_photos/office.jpg" width="100%"/>
                                 </blocks>
                             </ObjectPageSubSection>
                             <ObjectPageSubSection title="{i18n>PROPERTY_CATEGORY_RETAIL}">
                                 <blocks>
-                                    <m:Image src="/img/welcome_photos/retail.jpg" width="100%"/>
+                                    <m:Image src="img/welcome_photos/retail.jpg" width="100%"/>
                                 </blocks>
                             </ObjectPageSubSection>
                         </subSections>
