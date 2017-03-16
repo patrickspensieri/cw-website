@@ -45,8 +45,16 @@
                 </headerTitle>
 
                 <headerContent>
-                    <m:ObjectAttribute title="" text="{type}"/>
-                    <m:ObjectAttribute title="" text="{sqft}sq ft"/>
+				    <m:ObjectNumber number="{sqft}" numberUnit="sq ft"/>
+                        <m:ObjectStatus text="{type}"/>
+                        <m:ObjectStatus   text="{
+                                path : 'status',
+                                formatter : '.formatter.statusText'
+                            }"
+                            state="{
+                                path : 'status',
+                                formatter : '.formatter.statusState'
+                            }" />
                 </headerContent>
                 <sections>
                     <!-- Location -->
@@ -68,12 +76,8 @@
                             </ObjectPageSubSection>
                         </subSections>
                     </ObjectPageSection>
-                    
-                    <!-- About -->
-                    <ObjectPageSection title="About">
-                        <subSections>
-                            <ObjectPageSubSection title="">
-                                <blocks>
+
+<!--
                                     <m:ObjectHeader
                                         title="{Name}"
                                         number="{
@@ -81,28 +85,7 @@
                                             formatter : '.formatter.price'
                                         }"
                                         numberUnit="CAD">
-                                        <m:attributes>
-                                            <m:ObjectAttribute
-                                                text="{City}" />
-                                            <m:ObjectAttribute
-                                                text="{sqft}sq ft" />
-                                        </m:attributes>
-                                        <m:firstStatus>
-                                            <m:ObjectStatus
-                                                text="{
-                                                    path : 'status',
-                                                    formatter : '.formatter.statusText'
-                                                }"
-                                                state="{
-                                                    path : 'status',
-                                                    formatter : '.formatter.statusState'
-                                                }" />
-                                        </m:firstStatus>
-                                    </m:ObjectHeader>
-                                </blocks>
-                            </ObjectPageSubSection>
-                        </subSections>
-                    </ObjectPageSection>
+-->
                     
                      <!-- Details -->
                     <ObjectPageSection title="Details">
@@ -110,12 +93,21 @@
                             <ObjectPageSubSection title="">
                                 <blocks>
                                    <m:List id="detailsList">
+                                       <m:DisplayListItem
+                                            label="Address"
+                                            value="{Name}"/>
+                                       <m:DisplayListItem
+                                            label="Category"
+                                            value="{
+                                                     path : 'Category',
+                                                     formatter : '.formatter.productCategory'
+                                                     }"/>
                                         <m:DisplayListItem
                                             label="Type"
                                             value="{type}"/>
                                         <m:DisplayListItem
                                             label="Available Space"
-                                            value="{sqft}"/>
+                                            value="{sqft} sq ft"/>
                                        <m:DisplayListItem
                                             label="Floors"
                                             value="{floors}"
