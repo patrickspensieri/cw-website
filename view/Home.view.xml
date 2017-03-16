@@ -96,11 +96,8 @@
 					<ObjectListItem
 						type="{device>/listItemType}"
 						title="{Name}"
-						number="{
-							path : 'Price',
-							formatter : '.formatter.price'
-						}"
-						numberUnit="CAD"
+						number="{sqft}"
+						numberUnit="sq ft"
 						press="handleProductListItemPress"
 						iconDensityAware="false" >
 						<attributes>

@@ -31,6 +31,7 @@ sap.ui.define([
             //subscribe to event bus, reset the text once language is changed
             // register for events
 			var oBus = sap.ui.getCore().getEventBus();
+            //believe this can be achieved with formatter (see productCategory formatting)
 			oBus.subscribe("home", "updateSection", this.setWelcomeSectionListTitle, this);
 
 		},
