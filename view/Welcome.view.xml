@@ -31,13 +31,13 @@
 		<m:content>
             <ObjectPageLayout id="WelcomeObjectPageLayout" enableLazyLoading="false">
                 <headerTitle>
-                    <ObjectPageHeader objectTitle="CW Website" 
+                    <ObjectPageHeader objectTitle="Website" 
                                       isObjectTitleAlwaysVisible="true">
                     </ObjectPageHeader>
                 </headerTitle>
 
                 <headerContent>
-                    <m:ObjectAttribute title="" text="A money mission statement"/>
+                    <m:ObjectAttribute title="" text="your mission statement"/>
                 </headerContent>
                 
                 <sections>
@@ -46,7 +46,7 @@
                         <subSections>
                             <ObjectPageSubSection title="">
                                 <blocks>
-                                    <m:Button text="testBtn"/>
+                                    <m:Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
                                 </blocks>
                             </ObjectPageSubSection>
                         </subSections>
@@ -55,19 +55,19 @@
                     <!-- Our Services -->
                     <ObjectPageSection title="Our Services" id="WELCOME_SECTION_OUR_SERVICES">
                         <subSections>
-                            <ObjectPageSubSection title="Industrial">
+                            <ObjectPageSubSection title="{i18n>PROPERTY_CATEGORY_INDUSTRIAL}">
                                 <blocks>
-                                    <m:Button text="testBtn"/>
+                                    <m:Image src="/img/welcome_photos/industrial.jpg" width="100%"/>
                                 </blocks>
                             </ObjectPageSubSection>
-                            <ObjectPageSubSection title="Office">
+                            <ObjectPageSubSection title="{i18n>PROPERTY_CATEGORY_OFFICE}">
                                 <blocks>
-                                    <m:Button text="testBtn"/>
+                                    <m:Image src="/img/welcome_photos/office.jpg" width="100%"/>
                                 </blocks>
                             </ObjectPageSubSection>
-                            <ObjectPageSubSection title="Residential">
+                            <ObjectPageSubSection title="{i18n>PROPERTY_CATEGORY_RETAIL}">
                                 <blocks>
-                                    <m:Button text="testBtn"/>
+                                    <m:Image src="/img/welcome_photos/retail.jpg" width="100%"/>
                                 </blocks>
                             </ObjectPageSubSection>
                         </subSections>
@@ -83,7 +83,7 @@
                                         <l:content>
         <!--                                      Marco Romano-->
                                             <m:List
-                                                headerText="Marco Romano">
+                                                headerText="Bob">
                                                 <m:DisplayListItem
                                                     label="Phone"
                                                     value="514-123-4567"
@@ -91,17 +91,17 @@
                                                     press="handleTelPress"/>
                                                 <m:DisplayListItem
                                                     label="Email"
-                                                    value="marco.romano@test.ca"
+                                                    value="bob@test.ca"
                                                     type="Navigation"
                                                     press="handleEmailPress"/>
                                                 <m:DisplayListItem
                                                     label="Address"
-                                                    value="999 de Maisonneuve Blvd W. bureau 1500 Montreal, QC H3A 3L4"
+                                                    value="111 de Maisonneuve Blvd W. Montreal"
                                                     type="Action" />
                                             </m:List>
                                             <!--  Joe Rullier-->
                                             <m:List
-                                                headerText="Joe Rullier">
+                                                headerText="Will">
                                                 <m:DisplayListItem
                                                     label="Phone"
                                                     value="514-123-4567"
@@ -109,12 +109,12 @@
                                                     press="handleTelPress"/>
                                                 <m:DisplayListItem
                                                     label="Email"
-                                                    value="joe.rullier@test.ca"
+                                                    value="will@test.ca"
                                                     type="Navigation"
                                                     press="handleEmailPress"/>
                                                 <m:DisplayListItem
                                                     label="Address"
-                                                    value="999 de Maisonneuve Blvd W. bureau 1500 Montreal, QC H3A 3L4"
+                                                    value="111 de Maisonneuve Blvd W. Montreal"
                                                     type="Action" />
                                             </m:List>
                                         </l:content>
