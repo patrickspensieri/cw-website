@@ -160,7 +160,7 @@ sap.ui.define([
 						}
 					}),
 					rightButton: new Button({
-						text: oBundle.getText("DIALOG_CANCEL_ACTION"),
+						text: oBundle.getText("CANCEL"),
 						press: function () {
 							that._orderDialog.close();
 						}

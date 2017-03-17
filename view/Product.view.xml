@@ -37,7 +37,7 @@
                     <ObjectPageHeader objectTitle="{Name}"
                                       objectSubtitle="{City}">
                         <actions>
-                            <ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="More Info" importance="High" hideText="false"
+                            <ObjectPageHeaderActionButton icon="sap-icon://pdf-attachment" text="{i18n>PROPERTY_MORE_INFO}" importance="High" hideText="false"
                             press="onOpenPDF"
                             visible="{= ${pdf}? true : false }"/>
                         </actions>
@@ -58,7 +58,7 @@
                 </headerContent>
                 <sections>
                     <!-- Location -->
-                    <ObjectPageSection title="Location">
+                    <ObjectPageSection title="{i18n>PROPERTY_LOCATION}">
                         <subSections>
                             <ObjectPageSubSection title="">
                                 <blocks>
@@ -88,28 +88,31 @@
 -->
                     
                      <!-- Details -->
-                    <ObjectPageSection title="Details">
+                    <ObjectPageSection title="{i18n>PROPERTY_DETAILS}">
                         <subSections>
                             <ObjectPageSubSection title="">
                                 <blocks>
                                    <m:List id="detailsList">
                                        <m:DisplayListItem
-                                            label="Address"
+                                            label="{i18n>PROPERTY_ADDRESS}"
                                             value="{Name}"/>
                                        <m:DisplayListItem
-                                            label="Category"
+                                            label="{i18n>PROPERTY_CATEGORY}"
                                             value="{
                                                      path : 'Category',
                                                      formatter : '.formatter.productCategory'
                                                      }"/>
                                         <m:DisplayListItem
-                                            label="Type"
-                                            value="{type}"/>
+                                            label="{i18n>PROPERTY_TYPE}"
+                                            value="{
+                                                     path : 'type',
+                                                     formatter : '.formatter.productType'
+                                                     }"/>
                                         <m:DisplayListItem
-                                            label="Available Space"
+                                            label="{i18n>PROPERTY_AVAILABLE_SPACE}"
                                             value="{sqft} sq ft"/>
                                        <m:DisplayListItem
-                                            label="Floors"
+                                            label="{i18n>PROPERTY_FLOORS}"
                                             value="{floors}"
                                             visible="{
                                                      path : 'floors',

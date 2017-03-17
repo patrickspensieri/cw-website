@@ -26,7 +26,7 @@
 				<SearchField
 					id="searchField"
 					showRefreshButton="{device>/isNoTouch}"
-					placeholder="{i18n>HOME_SEARCH_PLACEHOLDER}"
+					placeholder="{i18n>SEARCH}"
 					search="handleSearch"
 					tooltip="{i18n>HOME_SEARCH_TOOLTIP}"
 					width="100%">

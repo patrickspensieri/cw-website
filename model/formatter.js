@@ -50,6 +50,18 @@
 			return mCategoryName[categoryName] || categoryName;
         },
 
+        productType: function(type){
+            var oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+            
+            var aTypeName = {
+                "Multi-Residential": oBundle.getText("PROPERTY_TYPE_MULTI_RESIDENTIAL"), 
+                "Investment": oBundle.getText("PROPERTY_TYPE_INVESTMENT"),
+                "Redevelopment": oBundle.getText("PROPERTY_TYPE_REDEVELOPMENT"),
+            };
+            
+            return aTypeName[type] || type;
+        },
+        
 		statusState: function (status) {
 			return mStatusState[status] || "None";
 		},

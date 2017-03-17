@@ -37,12 +37,12 @@
                 </headerTitle>
 
                 <headerContent>
-                    <m:ObjectAttribute title="" text="your mission statement"/>
+                    <m:ObjectAttribute title="" text="{i18n>MISSION_STATEMENT}"/>
                 </headerContent>
                 
                 <sections>
                     <!-- About -->
-                    <ObjectPageSection title="About" id="WELCOME_SECTION_ABOUT">
+                    <ObjectPageSection title="{i18n>WELCOME_SECTION_ABOUT}" id="WELCOME_SECTION_ABOUT">
                         <subSections>
                             <ObjectPageSubSection title="">
                                 <blocks>
@@ -53,7 +53,7 @@
                     </ObjectPageSection>
 
                     <!-- Our Services -->
-                    <ObjectPageSection title="Our Services" id="WELCOME_SECTION_OUR_SERVICES">
+                    <ObjectPageSection title="{i18n>WELCOME_SECTION_OUR_SERVICES}" id="WELCOME_SECTION_OUR_SERVICES">
                         <subSections>
                             <ObjectPageSubSection title="{i18n>PROPERTY_CATEGORY_INDUSTRIAL}">
                                 <blocks>
@@ -74,7 +74,7 @@
                     </ObjectPageSection>
 
                     <!-- Contact Us -->
-                    <ObjectPageSection title="Contact Us" id="WELCOME_SECTION_CONTACT_US">
+                    <ObjectPageSection title="{i18n>WELCOME_SECTION_CONTACT_US}" id="WELCOME_SECTION_CONTACT_US">
                         <subSections>
                             <ObjectPageSubSection title="" id="contactUsSection">
                                 <blocks>
@@ -85,17 +85,17 @@
                                             <m:List
                                                 headerText="Bob">
                                                 <m:DisplayListItem
-                                                    label="Phone"
+                                                    label="{i18n>PHONE}"
                                                     value="514-123-4567"
                                                     type="Navigation"
                                                     press="handleTelPress"/>
                                                 <m:DisplayListItem
-                                                    label="Email"
+                                                    label="{i18n>EMAIL}"
                                                     value="bob@test.ca"
                                                     type="Navigation"
                                                     press="handleEmailPress"/>
                                                 <m:DisplayListItem
-                                                    label="Address"
+                                                    label="{i18n>ADDRESS}"
                                                     value="111 de Maisonneuve Blvd W. Montreal"
                                                     type="Action" />
                                             </m:List>
@@ -103,17 +103,17 @@
                                             <m:List
                                                 headerText="Will">
                                                 <m:DisplayListItem
-                                                    label="Phone"
+                                                    label="{i18n>PHONE}"
                                                     value="514-123-4567"
                                                     type="Navigation"
                                                     press="handleTelPress"/>
                                                 <m:DisplayListItem
-                                                    label="Email"
+                                                    label="{i18n>EMAIL}"
                                                     value="will@test.ca"
                                                     type="Navigation"
                                                     press="handleEmailPress"/>
                                                 <m:DisplayListItem
-                                                    label="Address"
+                                                    label="{i18n>ADDRESS}"
                                                     value="111 de Maisonneuve Blvd W. Montreal"
                                                     type="Action" />
                                             </m:List>
