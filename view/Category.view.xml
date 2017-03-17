@@ -7,7 +7,10 @@
 	xmlns:h="http://www.w3.org/1999/xhtml">
 	<Page
 		id="page"
-		title="{CategoryName}"
+		title="{
+                    path : 'CategoryName',
+                    formatter : '.formatter.productCategory'
+                }" 
 		showNavButton="true"
 		navButtonPress="handleNavButtonPress"
 		showFooter="{device>/isNoPhone}" >

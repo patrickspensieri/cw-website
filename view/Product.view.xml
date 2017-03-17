@@ -46,7 +46,10 @@
 
                 <headerContent>
 				    <m:ObjectNumber number="{sqft}" numberUnit="sq ft"/>
-                        <m:ObjectStatus text="{type}"/>
+                        <m:ObjectStatus text="{
+                                                 path : 'type',
+                                                 formatter : '.formatter.productType'
+                                                 }"/>
                         <m:ObjectStatus   text="{
                                 path : 'status',
                                 formatter : '.formatter.statusText'
@@ -96,6 +99,9 @@
                                        <m:DisplayListItem
                                             label="{i18n>PROPERTY_ADDRESS}"
                                             value="{Name}"/>
+                                       <m:DisplayListItem
+                                            label="{i18n>PROPERTY_CITY}"
+                                            value="{City}"/>
                                        <m:DisplayListItem
                                             label="{i18n>PROPERTY_CATEGORY}"
                                             value="{

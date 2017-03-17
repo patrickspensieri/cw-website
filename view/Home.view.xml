@@ -143,7 +143,10 @@
 						<customData>
 							<core:CustomData
 								key="id"
-								value="{Category}" />
+								value="{
+									path : 'Category',
+									formatter : '.formatter.productCategory'
+								}"  />
 						</customData>
 					</StandardListItem>
 				</items>
