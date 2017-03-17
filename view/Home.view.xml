@@ -64,7 +64,7 @@
             <!-- welcome page sections-->
             <List 
 				id="welcomePageSectionList"
-				headerText="Welcome"
+				headerText="{i18n>WELCOME_TITLE}"
 				mode="None"
 				items="{
 					path : '/WelcomePageSections'
