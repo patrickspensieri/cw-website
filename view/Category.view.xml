@@ -7,16 +7,21 @@
 	xmlns:h="http://www.w3.org/1999/xhtml">
 	<Page
 		id="page"
-		title="{CategoryName}"
+		title="{
+                    path : 'CategoryName',
+                    formatter : '.formatter.productCategory'
+                }" 
 		showNavButton="true"
 		navButtonPress="handleNavButtonPress"
 		showFooter="{device>/isNoPhone}" >
 		<headerContent>
+<!--
 			<Button
 				icon="sap-icon://email"
 				tooltip="{i18n>TO_CART_BUTTON_TOOLTIP}"
 				press="handleCartButtonPress">
 			</Button>
+-->
 		</headerContent>
 <!--
 		<footer>

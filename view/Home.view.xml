@@ -26,7 +26,7 @@
 				<SearchField
 					id="searchField"
 					showRefreshButton="{device>/isNoTouch}"
-					placeholder="{i18n>HOME_SEARCH_PLACEHOLDER}"
+					placeholder="{i18n>SEARCH}"
 					search="handleSearch"
 					tooltip="{i18n>HOME_SEARCH_TOOLTIP}"
 					width="100%">
@@ -64,7 +64,7 @@
             <!-- welcome page sections-->
             <List 
 				id="welcomePageSectionList"
-				headerText="Welcome"
+				headerText="{i18n>WELCOME_TITLE}"
 				mode="None"
 				items="{
 					path : '/WelcomePageSections'
@@ -143,7 +143,10 @@
 						<customData>
 							<core:CustomData
 								key="id"
-								value="{Category}" />
+								value="{
+									path : 'Category',
+									formatter : '.formatter.productCategory'
+								}"  />
 						</customData>
 					</StandardListItem>
 				</items>
