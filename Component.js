@@ -13,7 +13,7 @@ sap.ui.define([
 	return UIComponent.extend("ui.Component", {
 
 		metadata: {
-			includes : ["css/style.css"],
+			includes : ["css/style.d8665ab05783cdfc.css"],
 			routing: {
 				config: {
 					routerClass: Router,

@@ -9,7 +9,8 @@ module.exports = function(grunt) {
                         'css/**',
                         ]
                 },
-                src: ['index.html']
+                src: ['index.html',
+                    'Component.js']
             }
         }
     });
